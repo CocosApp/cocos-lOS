@@ -12,6 +12,7 @@ pod 'SwiftMessages'
 pod 'SwiftyJSON'
 pod 'FacebookCore'
 pod 'FacebookLogin'
+pod 'Firebase/Core'
 pod 'FacebookShare'
 
 end

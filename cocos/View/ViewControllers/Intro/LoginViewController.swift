@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FacebookLogin
 import FBSDKCoreKit
 import FBSDKLoginKit
 

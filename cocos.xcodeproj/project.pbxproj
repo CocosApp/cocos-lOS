@@ -16,6 +16,7 @@
 		4921187C20585C7100633ECA /* DiscountPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4921187B20585C7100633ECA /* DiscountPlaceCell.swift */; };
 		4938823720648F3800BA19A2 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938823620648F3700BA19A2 /* FavoriteViewController.swift */; };
 		494499CA2060617800C8AC97 /* ResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494499C92060617800C8AC97 /* ResponseEntity.swift */; };
+		495364CC20B77A98008BD859 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 495364CB20B77A97008BD859 /* GoogleService-Info.plist */; };
 		495747AD208C6CF300E84631 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495747AC208C6CF300E84631 /* AboutViewController.swift */; };
 		495747AF208C6FEB00E84631 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495747AE208C6FEB00E84631 /* ProfileViewController.swift */; };
 		495747B1208C852E00E84631 /* FavoritePlaceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495747B0208C852E00E84631 /* FavoritePlaceEntity.swift */; };
@@ -99,6 +100,7 @@
 		4921187B20585C7100633ECA /* DiscountPlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountPlaceCell.swift; sourceTree = "<group>"; };
 		4938823620648F3700BA19A2 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		494499C92060617800C8AC97 /* ResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseEntity.swift; sourceTree = "<group>"; };
+		495364CB20B77A97008BD859 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		495747AC208C6CF300E84631 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		495747AE208C6FEB00E84631 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		495747B0208C852E00E84631 /* FavoritePlaceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlaceEntity.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 		49C68896201FF22B00F1E1B3 /* App Delegate */ = {
 			isa = PBXGroup;
 			children = (
+				495364CB20B77A97008BD859 /* GoogleService-Info.plist */,
 				49C6B9C7201FE83600F390D4 /* Info.plist */,
 				49C6B9BB201FE83500F390D4 /* AppDelegate.swift */,
 			);
@@ -476,7 +479,6 @@
 				49C6B9B5201FE83500F390D4 /* Frameworks */,
 				49C6B9B6201FE83500F390D4 /* Resources */,
 				5FA4E1164A255161CB59D05C /* [CP] Embed Pods Frameworks */,
-				8600243E8B0B08D98FED0191 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -576,6 +578,7 @@
 			files = (
 				49C6B9C6201FE83600F390D4 /* LaunchScreen.storyboard in Resources */,
 				49C6B9C3201FE83600F390D4 /* Assets.xcassets in Resources */,
+				495364CC20B77A98008BD859 /* GoogleService-Info.plist in Resources */,
 				49D3AD0D2028F3270079D154 /* SuccessMessageView.xib in Resources */,
 				49C68895201FE94000F1E1B3 /* Podfile in Resources */,
 				49C6B9C1201FE83500F390D4 /* Main.storyboard in Resources */,
@@ -618,11 +621,13 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -635,11 +640,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -662,21 +669,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8600243E8B0B08D98FED0191 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cocos/Pods-cocos-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
