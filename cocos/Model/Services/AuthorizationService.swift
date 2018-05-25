@@ -22,6 +22,16 @@ class AuthorizationService : BaseService {
     static let sharedService = AuthorizationService()
     
     //MARK: - Public
+    func loginWithFacebook(_ access_token:String,success: @escaping SuccessResponse, failure: @escaping FailureResponse){
+        let params = ["access_token":access_token]
+        self.POST(withEndpoint: AuthorizationEndpoints.loginFacebook.rawValue, params: params, headers: nil, success: success, failure: failure)
+    }
+    
+    func loginWithGmail(_ access_token:String,success: @escaping SuccessResponse, failure: @escaping FailureResponse){
+    let params = ["access_token":access_token]
+    self.POST(withEndpoint: AuthorizationEndpoints.loginGmail.rawValue, params: params, headers: nil, success: success, failure: failure)
+    }
+    
     func login(email:String, password:String, success: @escaping SuccessResponse, failure: @escaping FailureResponse){
         let params = ["email":email,"password":password]
         self.POST(withEndpoint: AuthorizationEndpoints.login.rawValue, params: params, headers: nil, success: success, failure: failure)

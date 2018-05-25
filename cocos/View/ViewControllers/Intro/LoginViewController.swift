@@ -9,8 +9,10 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import GoogleSignIn
 
-class LoginViewController : BaseUIViewController {
+class LoginViewController : BaseUIViewController , GIDSignInDelegate, GIDSignInUIDelegate{
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -20,6 +22,8 @@ class LoginViewController : BaseUIViewController {
     //MARK: - Lyfecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        GIDSignIn.sharedInstance().delegate=self
+        GIDSignIn.sharedInstance().uiDelegate=self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,12 +58,20 @@ class LoginViewController : BaseUIViewController {
         }
     }
     @IBAction func FacebookButtonDidSelect(_ sender: UIButton) {
+        let controller = LoginController.controller
         let hasPermissions = FBSDKAccessToken.current() != nil
         if hasPermissions {
-            
+            let token : String = FBSDKAccessToken.current().tokenString!
+            controller.loginFacebook(token, success: {user in
+                self.hideActivityIndicator()
+                self.presentMainViewController()
+                }, failure: { error in
+                    self.loginManager.logOut()
+                    self.requestDidFinishWithError(error)
+            })
         }
         else{
-            loginManager.logIn(withPublishPermissions: ["public_profile","email"], from: self) { (result, error) in
+            loginManager.logIn(withReadPermissions: ["public_profile","email"], from: self) { (result, error) in
                 if error != nil {
                     self.showErrorMessage(withTitle: (error?.localizedDescription)!)
                 }
@@ -68,7 +80,14 @@ class LoginViewController : BaseUIViewController {
                     self.showSuccessMessage(withTitle: "Se canceló la petición a Facebook")
                 }
                 else {
-                    
+                    let token : String = FBSDKAccessToken.current().tokenString!
+                    controller.loginFacebook(token, success: {user in
+                        self.hideActivityIndicator()
+                        self.presentMainViewController()
+                    }, failure: { error in
+                        self.loginManager.logOut()
+                        self.requestDidFinishWithError(error)
+                    })
                 }
             }
         }
@@ -76,6 +95,7 @@ class LoginViewController : BaseUIViewController {
     }
     
     @IBAction func gmailButtonDidSelect(_ sender: UIButton) {
+        GIDSignIn.sharedInstance().signIn()
     }
     
     @IBAction func guessButtonDidSelect(_ sender: UIButton) {
@@ -89,4 +109,22 @@ class LoginViewController : BaseUIViewController {
         })
     }
     
+    //pragma Mark - delegates
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if error == nil {
+            
+        }
+        else{
+            GIDSignIn.sharedInstance().signOut()
+            self.showErrorMessage(withTitle: error.localizedDescription)
+        }
+    }
+    
+    func sign(_ signIn: GIDSignIn!, present viewController: UIViewController!) {
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
+    func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
