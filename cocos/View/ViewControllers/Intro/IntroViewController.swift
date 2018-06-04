@@ -19,12 +19,12 @@ class IntroViewController : BaseUIViewController {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         viewPager.dataSource = self
-        viewPager.animationNext()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewPager.scrollToPage(0)
+        viewPager.animationNext()
     }
     
     @IBAction func skipButtonDidSelect(_ sender: Any) {
