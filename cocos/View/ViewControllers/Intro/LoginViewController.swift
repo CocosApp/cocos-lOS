@@ -22,6 +22,12 @@ class LoginViewController : BaseUIViewController , GIDSignInDelegate, GIDSignInU
     //MARK: - Lyfecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.emailTextField.setBottomBorder()
+        self.passwordTextField.setBottomBorder()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         GIDSignIn.sharedInstance().delegate=self
         GIDSignIn.sharedInstance().uiDelegate=self
     }
@@ -63,6 +69,7 @@ class LoginViewController : BaseUIViewController , GIDSignInDelegate, GIDSignInU
         if hasPermissions {
             let token : String = FBSDKAccessToken.current().tokenString!
             controller.loginFacebook(token, success: {user in
+                self.loginManager.logOut()
                 self.hideActivityIndicator()
                 self.presentMainViewController()
                 }, failure: { error in
@@ -82,6 +89,7 @@ class LoginViewController : BaseUIViewController , GIDSignInDelegate, GIDSignInU
                 else {
                     let token : String = FBSDKAccessToken.current().tokenString!
                     controller.loginFacebook(token, success: {user in
+                        self.loginManager.logOut()
                         self.hideActivityIndicator()
                         self.presentMainViewController()
                     }, failure: { error in

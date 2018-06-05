@@ -378,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/FavoriteViewController.swift"
-            timestampString = "546364273.402729"
+            timestampString = "549931285.574387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "loadData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -422,11 +422,11 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; () in cocos.FavoriteController.getFavoritePlaces(success: (Swift.Array&lt;cocos.PlacesEntity&gt;) -&gt; (), failure: (__ObjC.NSError) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; () in cocos.FavoriteController.getFavoritePlaces(success: (Swift.Array&lt;cocos.FavoritePlaceEntity&gt;) -&gt; (), failure: (__ObjC.NSError) -&gt; ()) -&gt; ()"
                   moduleName = "cocos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/FavoriteController.swift"
-                  timestampString = "546079901.829253"
+                  timestampString = "549931166.131914"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -437,11 +437,11 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; () in cocos.FavoriteController.getFavoritePlaces(success: (Swift.Array&lt;cocos.PlacesEntity&gt;) -&gt; (), failure: (__ObjC.NSError) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; () in cocos.FavoriteController.getFavoritePlaces(success: (Swift.Array&lt;cocos.FavoritePlaceEntity&gt;) -&gt; (), failure: (__ObjC.NSError) -&gt; ()) -&gt; ()"
                   moduleName = "cocos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/FavoriteController.swift"
-                  timestampString = "546079901.832314"
+                  timestampString = "549931166.13465"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -449,6 +449,22 @@
                   offsetFromSymbolStart = "472">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/View/ViewControllers/Intro/LoginViewController.swift"
+            timestampString = "549931285.574577"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "gmailButtonDidSelect(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
