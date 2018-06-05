@@ -8,17 +8,19 @@
 
 import UIKit
 
-class FavoriteViewController : BaseUIViewController,UITableViewDelegate,UITableViewDataSource {
+class FavoriteViewController : BaseUIViewController {
     
     @IBOutlet weak var favoriteSearchBar: UISearchBar!
     @IBOutlet weak var favoriteTableView: UITableView!
+    
+    let kPlaceDetailIdentifier:String = "placeDetailIdentifier"
+    var place : FavoritePlaceEntity!
     
     var favoritePlaces : [FavoritePlaceEntity] = [] {
         didSet{
             favoriteTableView.reloadData()
         }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,18 @@ class FavoriteViewController : BaseUIViewController,UITableViewDelegate,UITableV
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == kPlaceDetailIdentifier {
+            if let viewController = segue.destination as? PlaceDetailViewController {
+                let id : Int = (self.place.place?.id)!
+                viewController.placeId = String(id)
+            }
+        }
+    }
+    
+}
+
+extension FavoriteViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return favoritePlaces.count
     }
@@ -52,6 +66,10 @@ class FavoriteViewController : BaseUIViewController,UITableViewDelegate,UITableV
         return 130
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.place = self.favoritePlaces[indexPath.row]
+        performSegue(withIdentifier: kPlaceDetailIdentifier, sender: self)
+    }
 }
 
 extension FavoriteViewController : UISearchBarDelegate{

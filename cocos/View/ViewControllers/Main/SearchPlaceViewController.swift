@@ -10,6 +10,8 @@ import UIKit
 
 class SearchPlaceViewController : UIViewController {
     @IBOutlet weak var searchPlaceTableView: UITableView!
+    let kPlaceDetailIdentifier : String = "placeDetailIdentifier"
+    var place : PlacesEntity!
     var list : [PlacesEntity] = [] {
         didSet{
             searchPlaceTableView.reloadData()

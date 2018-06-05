@@ -314,7 +314,7 @@
         <!--Login View Controller-->
         <scene sceneID="rMp-zr-kYH">
             <objects>
-                <viewController id="o5f-TS-p4h" customClass="LoginViewController" customModule="cocos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" id="o5f-TS-p4h" customClass="LoginViewController" customModule="cocos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hfk-zN-1jt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

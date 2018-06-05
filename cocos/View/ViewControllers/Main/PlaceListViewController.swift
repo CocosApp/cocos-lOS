@@ -8,10 +8,14 @@
 
 import UIKit
 
+
+
 class PlaceListViewController : UIViewController {
     @IBOutlet weak var listTableView : UITableView!
     var lat : Double!
     var long : Double!
+    var place :PlacesEntity!
+    let kPlaceDetailIdentifier:String="placeDetailIdentifier";
     var placesList : [PlacesEntity] = []{
         didSet{
             listTableView.reloadData()
@@ -43,6 +47,14 @@ class PlaceListViewController : UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == kPlaceDetailIdentifier){
+            if let viewController = segue.destination as? PlaceDetailViewController {
+                viewController.placeId = String(self.place.id)
+            }
+        }
+    }
+    
 }
 
 extension PlaceListViewController : UITableViewDelegate , UITableViewDataSource {
@@ -59,6 +71,11 @@ extension PlaceListViewController : UITableViewDelegate , UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.place = placesList[indexPath.row];
+        performSegue(withIdentifier: kPlaceDetailIdentifier, sender: self)
     }
     
     

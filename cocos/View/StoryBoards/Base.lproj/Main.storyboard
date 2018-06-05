@@ -376,7 +376,7 @@
                     </view>
                     <connections>
                         <outlet property="searchPlaceTableView" destination="zgn-1j-rHm" id="Tg7-3B-Oda"/>
-                        <segue destination="cuS-oo-XaQ" kind="show" id="GyN-wF-uQN"/>
+                        <segue destination="cuS-oo-XaQ" kind="show" identifier="placeDetailIdentifier" id="GyN-wF-uQN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfq-C1-dY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -449,7 +449,7 @@
                     </view>
                     <connections>
                         <outlet property="listTableView" destination="mLP-Ne-Xxe" id="x6c-lj-arZ"/>
-                        <segue destination="cuS-oo-XaQ" kind="show" id="nIo-JH-tyT"/>
+                        <segue destination="cuS-oo-XaQ" kind="show" identifier="placeDetailIdentifier" id="nIo-JH-tyT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgJ-Nh-Fdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -605,7 +605,7 @@
                     <connections>
                         <outlet property="favoriteSearchBar" destination="BKx-Wf-eRS" id="Td9-aF-Fu1"/>
                         <outlet property="favoriteTableView" destination="6cp-YX-oNX" id="wWy-rA-sET"/>
-                        <segue destination="cuS-oo-XaQ" kind="show" id="ida-Vq-3Ev"/>
+                        <segue destination="cuS-oo-XaQ" kind="show" identifier="placeDetailIdentifier" id="ida-Vq-3Ev"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Xn-YY-E9L" userLabel="First Responder" sceneMemberID="firstResponder"/>

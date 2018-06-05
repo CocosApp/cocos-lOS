@@ -22,15 +22,9 @@ class ProfileViewController : UIViewController {
     }
     
     @IBAction func closeSessionDidSelect(_ sender: UIButton) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let window = appDelegate.window
-        let introNavController = UIStoryboard(name: "Intro", bundle: Bundle.main).instantiateInitialViewController() as UIViewController?
-        UIView.transition(from: (window?.rootViewController?.view!)!, to: (introNavController?.view!)!, duration: 0.5, options: .transitionFlipFromRight, completion:{ finish in
-            if finish == true {
-                window?.rootViewController = introNavController
-                UserEntity.unarchiveUser()
-            }
-        })
+        let introNavController = UIStoryboard(name: "Intro", bundle: Bundle.main).instantiateViewController(withIdentifier: "loginViewController")
+        self.navigationController?.popToRootViewController(animated: false)
+        self.navigationController?.pushViewController(introNavController, animated: true);
     }
     @IBAction func uploadProfileDidSelect(_ sender: UIButton) {
         if email != "invitado@gmail.com"{
