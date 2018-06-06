@@ -331,7 +331,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_with_description" translatesAutoresizingMaskIntoConstraints="NO" id="CNI-0l-jPs">
-                                                <rect key="frame" x="40" y="30" width="240" height="100"/>
+                                                <rect key="frame" x="60" y="30" width="200" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="Of3-ZF-urr"/>
                                                 </constraints>
@@ -349,6 +349,12 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                         <color key="value" white="1" alpha="0.77258133559999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomBorderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zjq-pM-rjC">
@@ -362,6 +368,12 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                         <color key="value" white="1" alpha="0.77258133561643838" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomBorderWidth">
+                                                        <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -502,13 +514,13 @@
                                             <constraint firstItem="VWl-9V-xXv" firstAttribute="leading" secondItem="JhI-6P-dbs" secondAttribute="leading" constant="50" id="INY-OA-Ijd"/>
                                             <constraint firstItem="5i9-cs-p7m" firstAttribute="top" secondItem="CNI-0l-jPs" secondAttribute="bottom" constant="20" id="LF4-w3-aUV"/>
                                             <constraint firstItem="iSc-zx-b3a" firstAttribute="height" secondItem="fMv-kO-h5H" secondAttribute="height" id="Ldk-LJ-Blf"/>
-                                            <constraint firstAttribute="trailing" secondItem="CNI-0l-jPs" secondAttribute="trailing" constant="40" id="Lng-qX-4g5"/>
+                                            <constraint firstAttribute="trailing" secondItem="CNI-0l-jPs" secondAttribute="trailing" constant="60" id="Lng-qX-4g5"/>
                                             <constraint firstAttribute="trailing" secondItem="eX0-Rl-ATz" secondAttribute="trailing" constant="50" id="MsN-lD-01A"/>
                                             <constraint firstItem="fMv-kO-h5H" firstAttribute="width" secondItem="iSc-zx-b3a" secondAttribute="width" id="ODu-3y-gVY"/>
                                             <constraint firstItem="VWl-9V-xXv" firstAttribute="top" secondItem="t1s-Zx-jJ8" secondAttribute="bottom" constant="70" id="R3n-xT-3Cj"/>
                                             <constraint firstItem="oeE-rf-Jcp" firstAttribute="top" secondItem="9Lk-lj-o6g" secondAttribute="bottom" constant="27" id="Raf-Ab-0zz"/>
                                             <constraint firstAttribute="trailing" secondItem="Iyj-xb-d96" secondAttribute="trailing" id="UMg-CV-OWL"/>
-                                            <constraint firstItem="CNI-0l-jPs" firstAttribute="leading" secondItem="JhI-6P-dbs" secondAttribute="leading" constant="40" id="Vxs-tX-Z2h"/>
+                                            <constraint firstItem="CNI-0l-jPs" firstAttribute="leading" secondItem="JhI-6P-dbs" secondAttribute="leading" constant="60" id="Vxs-tX-Z2h"/>
                                             <constraint firstItem="9Lk-lj-o6g" firstAttribute="width" secondItem="oXq-vL-a9I" secondAttribute="width" constant="27" id="Vy2-93-NAx"/>
                                             <constraint firstItem="fMv-kO-h5H" firstAttribute="leading" secondItem="iSc-zx-b3a" secondAttribute="trailing" constant="40" id="XL5-2Z-9WQ"/>
                                             <constraint firstItem="iSc-zx-b3a" firstAttribute="top" secondItem="t1s-Zx-jJ8" secondAttribute="bottom" constant="20" id="Xq7-60-vxW"/>

@@ -287,16 +287,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="kZb-oA-snx" firstAttribute="top" secondItem="g8o-aL-XQi" secondAttribute="bottom" id="H8K-Kf-UKg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gMd-CW-9NJ" secondAttribute="bottom" id="JAu-Vz-YF4"/>
-                            <constraint firstItem="kZb-oA-snx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yam-Nm-I59"/>
-                            <constraint firstItem="gMd-CW-9NJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bK0-dm-fia"/>
-                            <constraint firstItem="g8o-aL-XQi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fc6-Jg-NIk"/>
-                            <constraint firstItem="g8o-aL-XQi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g6A-pZ-Ktq"/>
-                            <constraint firstItem="gMd-CW-9NJ" firstAttribute="top" secondItem="kZb-oA-snx" secondAttribute="bottom" id="ivU-xl-5M0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g8o-aL-XQi" secondAttribute="trailing" id="qQ9-2j-vZZ"/>
-                            <constraint firstItem="kZb-oA-snx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uav-iS-qQ4"/>
-                            <constraint firstItem="gMd-CW-9NJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zxy-uW-nQo"/>
+                            <constraint firstItem="g8o-aL-XQi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="25b-0r-2pq"/>
+                            <constraint firstItem="kZb-oA-snx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3tE-WW-PAU"/>
+                            <constraint firstItem="kZb-oA-snx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5NO-8h-GpU"/>
+                            <constraint firstItem="gMd-CW-9NJ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Nr5-2w-Way"/>
+                            <constraint firstItem="g8o-aL-XQi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VQ1-Ob-b1n"/>
+                            <constraint firstItem="gMd-CW-9NJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aqE-re-9dL"/>
+                            <constraint firstItem="g8o-aL-XQi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mmH-yq-Bio"/>
+                            <constraint firstItem="kZb-oA-snx" firstAttribute="top" secondItem="g8o-aL-XQi" secondAttribute="bottom" id="qsh-75-NCN"/>
+                            <constraint firstItem="gMd-CW-9NJ" firstAttribute="top" secondItem="kZb-oA-snx" secondAttribute="bottom" id="ssJ-oP-eH3"/>
+                            <constraint firstItem="gMd-CW-9NJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tw9-8h-9kz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -1345,14 +1345,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="about" width="36" height="36"/>
-        <image name="account" width="36" height="36"/>
+        <image name="about" width="20" height="15"/>
+        <image name="account" width="18" height="20"/>
         <image name="air-icon" width="192" height="192"/>
         <image name="clock-icon" width="192" height="192"/>
         <image name="drink-icon" width="192" height="192"/>
-        <image name="favorite" width="36" height="36"/>
+        <image name="favorite" width="20" height="18"/>
         <image name="handicap-icon" width="192" height="192"/>
-        <image name="home" width="36" height="36"/>
+        <image name="home" width="20" height="18"/>
         <image name="image_email_black_small" width="36" height="36"/>
         <image name="image_profile_black_small" width="36" height="36"/>
         <image name="location-icon" width="192" height="192"/>
@@ -1375,6 +1375,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GyN-wF-uQN"/>
+        <segue reference="ida-Vq-3Ev"/>
     </inferredMetricsTieBreakers>
 </document>

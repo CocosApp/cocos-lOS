@@ -31,6 +31,14 @@ class SearchPlaceViewController : UIViewController {
             self.showErrorMessage(withTitle: error.localizedDescription)
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == kPlaceDetailIdentifier {
+            if let viewController = segue.destination as? PlaceDetailViewController{
+                let id : Int = self.place.id
+                viewController.placeId = String(id)
+            }
+        }
+    }
 }
 
 extension SearchPlaceViewController : UITableViewDelegate,UITableViewDataSource{
@@ -50,5 +58,10 @@ extension SearchPlaceViewController : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.place = list[indexPath.row]
+        performSegue(withIdentifier: kPlaceDetailIdentifier, sender: self)
     }
 }
