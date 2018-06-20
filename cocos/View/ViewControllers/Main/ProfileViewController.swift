@@ -45,7 +45,13 @@ class ProfileViewController : UIViewController {
         emailLabel.text = email
         let photo = user.picture
         if photo != "" {
-            profilePhoto.af_setImage(withURL: URL(string: photo)!)
+            let filter = AspectScaledToFillSizeCircleFilter(size: profilePhoto.frame.size)
+            profilePhoto.af_setImage(
+                withURL: URL(string: photo)!,
+                placeholderImage: nil,
+                filter: filter,
+                imageTransition: .crossDissolve(0.2)
+            )
         }
     }
 }

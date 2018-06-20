@@ -20,9 +20,9 @@ class PlaceDetailEntity : NSObject {
     var facebook : String = ""
     var food_letter : String = ""
     var mobile : String = ""
-    var photo1 : String = ""
-    var photo2 : String = ""
-    var photo3 : String = ""
+    var photo1 : String?
+    var photo2 : String?
+    var photo3 : String?
     var discount : [PromotionEntity] = []
     
     

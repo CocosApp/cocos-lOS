@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -684,17 +685,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0At-uk-saZ">
-                                                    <rect key="frame" x="15" y="19" width="290" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="BS6-yl-qOZ"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0At-uk-saZ">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="59.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRI-8F-TYK">
-                                                    <rect key="frame" x="315" y="19" width="45" height="21"/>
+                                                    <rect key="frame" x="315" y="-0.5" width="45" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="DR9-Fv-kSE"/>
                                                     </constraints>
@@ -705,7 +703,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="uRI-8F-TYK" firstAttribute="height" secondItem="0At-uk-saZ" secondAttribute="height" id="5et-lp-4xE"/>
+                                                <constraint firstAttribute="bottom" secondItem="0At-uk-saZ" secondAttribute="bottom" id="Dcr-Wp-Dal"/>
                                                 <constraint firstItem="uRI-8F-TYK" firstAttribute="leading" secondItem="0At-uk-saZ" secondAttribute="trailing" constant="10" id="KVk-ZR-JFe"/>
+                                                <constraint firstItem="0At-uk-saZ" firstAttribute="top" secondItem="lIz-x6-TnD" secondAttribute="top" id="S9y-NM-M5l"/>
                                                 <constraint firstAttribute="trailing" secondItem="uRI-8F-TYK" secondAttribute="trailing" constant="15" id="WOn-zG-GjV"/>
                                                 <constraint firstItem="0At-uk-saZ" firstAttribute="leading" secondItem="lIz-x6-TnD" secondAttribute="leading" constant="15" id="Woj-7j-I5o"/>
                                                 <constraint firstItem="0At-uk-saZ" firstAttribute="centerY" secondItem="lIz-x6-TnD" secondAttribute="centerY" id="oyn-BK-4Bb"/>
@@ -1024,9 +1024,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MP7-Np-dqx"/>
                     </view>
+                    <navigationItem key="navigationItem" id="g61-wH-bq9">
+                        <rightBarButtonItems>
+                            <barButtonItem image="ic_action_share" id="kzz-oc-ogn">
+                                <connections>
+                                    <action selector="shareButtonDidSelect:" destination="cuS-oo-XaQ" id="FBo-o0-Cwe"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="like_off" id="QfT-bc-0Cf">
+                                <connections>
+                                    <action selector="likeButtonDidSelect:" destination="cuS-oo-XaQ" id="LaA-V0-0gu"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
                         <outlet property="dataTableView" destination="q0F-LM-P2G" id="kQv-mW-tfa"/>
+                        <outlet property="likeBarButtonItem" destination="QfT-bc-0Cf" id="4F0-MP-uYw"/>
                         <outlet property="pagerImage" destination="LyV-Tn-xRq" id="p2v-Pz-rv7"/>
                     </connections>
                 </viewController>
@@ -1319,7 +1334,6 @@
                             <constraint firstItem="M4w-4D-mnU" firstAttribute="top" secondItem="tsd-P5-zcD" secondAttribute="bottom" constant="40" id="6nC-1S-dE4"/>
                             <constraint firstItem="1so-vu-Ji0" firstAttribute="top" secondItem="jXq-Lf-adg" secondAttribute="bottom" constant="20" id="AYz-QW-FN8"/>
                             <constraint firstItem="M4w-4D-mnU" firstAttribute="leading" secondItem="hfe-2d-mbH" secondAttribute="leading" id="BD4-p3-Osu"/>
-                            <constraint firstItem="tsd-P5-zcD" firstAttribute="top" secondItem="hfe-2d-mbH" secondAttribute="top" id="Ep9-rl-hIy"/>
                             <constraint firstItem="hfe-2d-mbH" firstAttribute="trailing" secondItem="jXq-Lf-adg" secondAttribute="trailing" id="FYi-uY-HXr"/>
                             <constraint firstItem="jXq-Lf-adg" firstAttribute="top" secondItem="M4w-4D-mnU" secondAttribute="bottom" constant="10" id="UA2-yD-FC8"/>
                             <constraint firstItem="6gs-xZ-IGI" firstAttribute="centerX" secondItem="wWB-Ug-9rg" secondAttribute="centerX" id="X7z-pM-5hM"/>
@@ -1328,10 +1342,12 @@
                             <constraint firstItem="hfe-2d-mbH" firstAttribute="trailing" secondItem="1so-vu-Ji0" secondAttribute="trailing" id="eF9-xG-Xlf"/>
                             <constraint firstItem="6gs-xZ-IGI" firstAttribute="top" secondItem="1so-vu-Ji0" secondAttribute="bottom" constant="10" id="gD2-je-OiD"/>
                             <constraint firstItem="1so-vu-Ji0" firstAttribute="leading" secondItem="hfe-2d-mbH" secondAttribute="leading" id="kYQ-1I-Bu4"/>
+                            <constraint firstItem="tsd-P5-zcD" firstAttribute="top" secondItem="wWB-Ug-9rg" secondAttribute="top" id="nt0-hb-goI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hfe-2d-mbH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Perfil" image="account" id="YCf-BM-GY3"/>
+                    <navigationItem key="navigationItem" id="usm-UJ-BNS"/>
                     <connections>
                         <outlet property="emailLabel" destination="MCm-8c-lAd" id="pHx-Dw-m9T"/>
                         <outlet property="firstNameLabel" destination="XOC-El-g44" id="Kr6-Uu-Smc"/>
@@ -1353,8 +1369,10 @@
         <image name="favorite" width="20" height="18"/>
         <image name="handicap-icon" width="192" height="192"/>
         <image name="home" width="20" height="18"/>
+        <image name="ic_action_share" width="12" height="13"/>
         <image name="image_email_black_small" width="36" height="36"/>
         <image name="image_profile_black_small" width="36" height="36"/>
+        <image name="like_off" width="18" height="18"/>
         <image name="location-icon" width="192" height="192"/>
         <image name="login_background" width="512" height="844"/>
         <image name="logo_with_description_colorful" width="625" height="204"/>

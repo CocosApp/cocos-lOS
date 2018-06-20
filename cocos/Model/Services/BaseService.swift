@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class BaseService : NSObject {
     // MARK: - Properties
-    let baseUrl = "http://cocos.cerezaconsulting.com/api/"
+    let baseUrl = "https://appcocos.com/api/"
     
     typealias SuccessResponse = (_ response: JSON) -> Void
     typealias FailureResponse = (_ error: NSError) -> Void
