@@ -25,6 +25,7 @@ class PlaceDetailViewController : UIViewController {
     var descriptionCellIdentifier : String = "descriptionPlaceCell"
     var placeDetail = PlaceDetailEntity(){
         didSet{
+            self.title = placeDetail.name
             self.dataTableView.reloadData()
             self.pagerImage.reloadData()
         }

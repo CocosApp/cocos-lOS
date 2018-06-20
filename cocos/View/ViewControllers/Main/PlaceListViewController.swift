@@ -22,9 +22,11 @@ class PlaceListViewController : UIViewController {
         }
     }
     var subcategoryId:Int!
+    var subcategoryName:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = self.subcategoryName
         self.getFakeLocation()
     }
     

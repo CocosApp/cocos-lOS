@@ -24,7 +24,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8o-aL-XQi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <subviews>
-                                    <searchBar userInteractionEnabled="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="G9l-qw-New">
+                                    <searchBar userInteractionEnabled="NO" contentMode="redraw" placeholder="Buscar por nombre" translatesAutoresizingMaskIntoConstraints="NO" id="G9l-qw-New">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                         <color key="barTintColor" red="0.81176470590000005" green="0.0078431372550000003" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -160,7 +160,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hry-KM-HcV">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hry-KM-HcV">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="YRQ-W3-aVu"/>
@@ -250,7 +250,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D4g-Ul-8b4">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D4g-Ul-8b4">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asC-zP-qaN">
@@ -1107,7 +1107,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LD7-bn-MxL" customClass="RoundedBorderButton" customModule="cocos" customModuleProvider="target">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LD7-bn-MxL" customClass="RoundedBorderButton" customModule="cocos" customModuleProvider="target">
                                 <rect key="frame" x="30" y="407" width="315" height="40"/>
                                 <color key="backgroundColor" red="0.81176470590000005" green="0.0078431372550000003" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1393,6 +1393,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ida-Vq-3Ev"/>
+        <segue reference="nIo-JH-tyT"/>
     </inferredMetricsTieBreakers>
 </document>
