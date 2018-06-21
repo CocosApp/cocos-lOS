@@ -88,3 +88,19 @@ class ResponseEntityFavoritePlace : NSObject {
         return nil
     }
 }
+
+class ResponseEntityCardPlaces : NSObject {
+    var count : Int = 0
+    var next : String = ""
+    var results:[CardPlacesEntity] = []
+    class func getResponseFromJSON(fromJSON json : JSON?)->ResponseEntityCardPlaces?{
+        if let data = json {
+            let response = ResponseEntityCardPlaces()
+            response.count = data["count"].intValue
+            response.next = data["next"].stringValue
+            response.results = CardPlacesEntity.getCardPlacesFromJSONArray(fromJSONArray: data["results"].array)!
+            return response
+        }
+        return nil
+    }
+}

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0062A0B275A9B4879DD5F701 /* Pods_cocos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6B3251013C6875612E047E /* Pods_cocos.framework */; };
 		49026AD0208BD1CF005FFDAF /* FavoriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49026ACF208BD1CF005FFDAF /* FavoriteService.swift */; };
+		490EA7DF20DC223E001EDD48 /* PlacesByCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EA7DE20DC223E001EDD48 /* PlacesByCardController.swift */; };
+		490EA7E220DC2C4B001EDD48 /* CardPlacesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EA7E120DC2C4B001EDD48 /* CardPlacesEntity.swift */; };
+		490EA7E520DC4CBD001EDD48 /* PlacesByCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EA7E420DC4CBD001EDD48 /* PlacesByCardViewController.swift */; };
 		490FA755206184E900B474E4 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490FA754206184E900B474E4 /* UIImageView+DownloadImage.swift */; };
 		49211876205853E200633ECA /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49211875205853E200633ECA /* PlacesViewController.swift */; };
 		49211878205858D100633ECA /* CategoryPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49211877205858D100633ECA /* CategoryPlaceCell.swift */; };
@@ -93,6 +96,9 @@
 
 /* Begin PBXFileReference section */
 		49026ACF208BD1CF005FFDAF /* FavoriteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteService.swift; sourceTree = "<group>"; };
+		490EA7DE20DC223E001EDD48 /* PlacesByCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesByCardController.swift; sourceTree = "<group>"; };
+		490EA7E120DC2C4B001EDD48 /* CardPlacesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlacesEntity.swift; sourceTree = "<group>"; };
+		490EA7E420DC4CBD001EDD48 /* PlacesByCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesByCardViewController.swift; sourceTree = "<group>"; };
 		490FA754206184E900B474E4 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		49211875205853E200633ECA /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		49211877205858D100633ECA /* CategoryPlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPlaceCell.swift; sourceTree = "<group>"; };
@@ -217,6 +223,7 @@
 				495747AE208C6FEB00E84631 /* ProfileViewController.swift */,
 				495747B4208CF93900E84631 /* SearchPlaceViewController.swift */,
 				49844ED420A0DCE400C43FAD /* PlaceDetailViewController.swift */,
+				490EA7E420DC4CBD001EDD48 /* PlacesByCardViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -266,6 +273,7 @@
 				49778DDA208C33B0002672FC /* FavoriteController.swift */,
 				495747B6208CF9D400E84631 /* SearchPlaceController.swift */,
 				49844EDA20A0E36100C43FAD /* PlaceDetailController.swift */,
+				490EA7DE20DC223E001EDD48 /* PlacesByCardController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -290,6 +298,7 @@
 				494499C92060617800C8AC97 /* ResponseEntity.swift */,
 				495747B0208C852E00E84631 /* FavoritePlaceEntity.swift */,
 				49844ED620A0DF2600C43FAD /* PlaceDetailEntity.swift */,
+				490EA7E120DC2C4B001EDD48 /* CardPlacesEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -721,10 +730,12 @@
 				49844ED320A0D9E000C43FAD /* DescriptionPlaceCell.swift in Sources */,
 				49C6B9BC201FE83500F390D4 /* AppDelegate.swift in Sources */,
 				498F6EE32051E28700382241 /* SubcategoryEntity.swift in Sources */,
+				490EA7E520DC4CBD001EDD48 /* PlacesByCardViewController.swift in Sources */,
 				4998870B204DCB2000C59A64 /* ForgotPasswordViewController.swift in Sources */,
 				498F6EE72051EEA800382241 /* CardEntity.swift in Sources */,
 				494499CA2060617800C8AC97 /* ResponseEntity.swift in Sources */,
 				49622FCD20805E71007A6D10 /* PlaceListViewController.swift in Sources */,
+				490EA7E220DC2C4B001EDD48 /* CardPlacesEntity.swift in Sources */,
 				49844ED720A0DF2600C43FAD /* PlaceDetailEntity.swift in Sources */,
 				49FAEEFA203E4005000E444A /* UserEntity.swift in Sources */,
 				49026AD0208BD1CF005FFDAF /* FavoriteService.swift in Sources */,
@@ -733,6 +744,7 @@
 				49988709204DC3A000C59A64 /* RegisterController.swift in Sources */,
 				495747AF208C6FEB00E84631 /* ProfileViewController.swift in Sources */,
 				49622FCB20805AEF007A6D10 /* PlaceListCell.swift in Sources */,
+				490EA7DF20DC223E001EDD48 /* PlacesByCardController.swift in Sources */,
 				499E63382027E87900B88867 /* ViewPager.swift in Sources */,
 				495747AD208C6CF300E84631 /* AboutViewController.swift in Sources */,
 				498F6EDF2051DA1E00382241 /* PlacesService.swift in Sources */,

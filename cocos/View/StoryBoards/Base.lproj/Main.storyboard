@@ -309,11 +309,86 @@
                         <outlet property="nearMeButton" destination="Hqk-1O-5KI" id="Nh4-qO-TFt"/>
                         <outlet property="placesTableView" destination="gMd-CW-9NJ" id="1st-ZT-v6I"/>
                         <segue destination="cH3-A9-n0e" kind="show" identifier="showPlaceListSegue" id="x76-GC-Vdk"/>
+                        <segue destination="cuS-oo-XaQ" kind="show" identifier="placeDetailIdentifier" id="6c7-S9-J5B"/>
+                        <segue destination="vT8-kx-XcJ" kind="show" identifier="cardPlacesIdentifier" id="1G7-aw-nKC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="608.79999999999995" y="-63.418290854572717"/>
+        </scene>
+        <!--Places By Card View Controller-->
+        <scene sceneID="QxB-Zq-9j7">
+            <objects>
+                <viewController id="vT8-kx-XcJ" customClass="PlacesByCardViewController" customModule="cocos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qy5-Fi-Ova">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NmV-nn-gOE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="placeListCell" rowHeight="150" id="oqS-p1-oK8" customClass="PlaceListCell" customModule="cocos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oqS-p1-oK8" id="Wx7-Oe-Edw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GZm-Ro-IYO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnF-la-4Xb">
+                                                    <rect key="frame" x="0.0" y="110" width="375" height="40"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.50467649650000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="qUK-56-UYB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="GZm-Ro-IYO" secondAttribute="bottom" id="4Ki-1T-ziT"/>
+                                                <constraint firstItem="GZm-Ro-IYO" firstAttribute="leading" secondItem="Wx7-Oe-Edw" secondAttribute="leading" id="HsP-5q-FYb"/>
+                                                <constraint firstAttribute="trailing" secondItem="GZm-Ro-IYO" secondAttribute="trailing" id="NgO-VX-0eW"/>
+                                                <constraint firstAttribute="bottom" secondItem="hnF-la-4Xb" secondAttribute="bottom" id="RMH-FW-xej"/>
+                                                <constraint firstAttribute="trailing" secondItem="hnF-la-4Xb" secondAttribute="trailing" id="dYn-XN-B9l"/>
+                                                <constraint firstItem="hnF-la-4Xb" firstAttribute="leading" secondItem="Wx7-Oe-Edw" secondAttribute="leading" id="kFA-pY-vLL"/>
+                                                <constraint firstItem="GZm-Ro-IYO" firstAttribute="top" secondItem="Wx7-Oe-Edw" secondAttribute="top" id="kiv-wx-AeQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="backgroundImageView" destination="GZm-Ro-IYO" id="J8n-et-xIW"/>
+                                            <outlet property="lblTitle" destination="hnF-la-4Xb" id="Scd-DN-gJu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vT8-kx-XcJ" id="oc0-hk-0m1"/>
+                                    <outlet property="delegate" destination="vT8-kx-XcJ" id="pGV-uP-8Mx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NmV-nn-gOE" firstAttribute="top" secondItem="Qy5-Fi-Ova" secondAttribute="top" id="Ffk-ga-TP0"/>
+                            <constraint firstItem="MZR-sC-pFY" firstAttribute="bottom" secondItem="NmV-nn-gOE" secondAttribute="bottom" id="W4E-fJ-ba0"/>
+                            <constraint firstItem="NmV-nn-gOE" firstAttribute="leading" secondItem="Qy5-Fi-Ova" secondAttribute="leading" id="afB-EX-TIK"/>
+                            <constraint firstItem="MZR-sC-pFY" firstAttribute="trailing" secondItem="NmV-nn-gOE" secondAttribute="trailing" id="egI-HJ-0dY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MZR-sC-pFY"/>
+                    </view>
+                    <connections>
+                        <outlet property="placesByCardTableView" destination="NmV-nn-gOE" id="3PT-4Q-BGF"/>
+                        <segue destination="cuS-oo-XaQ" kind="show" identifier="placeDetailIdentifier" id="obl-GI-1xA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pm4-Hf-Rk7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1652" y="-1621"/>
         </scene>
         <!--Search Place View Controller-->
         <scene sceneID="gEs-K2-ptC">
@@ -1393,6 +1468,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nIo-JH-tyT"/>
+        <segue reference="obl-GI-1xA"/>
     </inferredMetricsTieBreakers>
 </document>

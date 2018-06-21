@@ -12,8 +12,9 @@ enum PlacesEndpoints: String {
     case placeSubcategoryList = "subcategory/list"
     case placesList = "restaurant/list/"
     case placesByGPS = "restaurantGPS/list/?lat=<lt>&long=<lng>&rad=5"
-    case discountList = "card/list/"
+    case cardList = "card/list/"
     case placesBySubcategory = "restaurantBySubcategory/<pk>/list/?lat=<lt>&long=<lng>&rad=5"
+    case placesByCard = "card/<pk>/discount/restaurant"
 }
 
 class PlacesService : BaseService {
@@ -38,7 +39,7 @@ class PlacesService : BaseService {
     
     func getDiscountList(token:String,success: @escaping SuccessResponse,failure: @escaping FailureResponse){
         let header = authorizationHeader(withToken: token)
-        self.GET(withEndpoint: PlacesEndpoints.discountList.rawValue, params: nil, headers: header, success: success, failure: failure)
+        self.GET(withEndpoint: PlacesEndpoints.cardList.rawValue, params: nil, headers: header, success: success, failure: failure)
     }
     
     func getPlacesBySubcategory(token:String,subcategoryId:String,latitude:String,longitude:String,success: @escaping SuccessResponse, failure: @escaping FailureResponse){
@@ -46,5 +47,9 @@ class PlacesService : BaseService {
         self.GET(withEndpoint: PlacesEndpoints.placesBySubcategory.rawValue.replacingOccurrences(of: "<pk>", with: subcategoryId).replacingOccurrences(of: "<lt>", with: latitude).replacingOccurrences(of: "<lng>", with: longitude), params: nil, headers: header, success: success, failure: failure)
     }
     
-    
+    func getPlacesByCard(token:String,cardId:String,success: @escaping SuccessResponse,failure: @escaping FailureResponse){
+        let header = authorizationHeader(withToken: token)
+        self.GET(withEndpoint: PlacesEndpoints.placesByCard.rawValue.replacingOccurrences(of: "<pk>", with: cardId), params: nil, headers: header, success: success, failure: failure)
+    }
+
 }

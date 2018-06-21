@@ -32,8 +32,12 @@ class PlacesViewController: BaseUIViewController {
     var long : Double!
     var subcategoryId : Int?
     var subcategoryName : String?
+    var placeNearMeId : String?
+    var cardId : String?
     
     var kshowPlaceListSegue : String = "showPlaceListSegue"
+    var kplaceDetailIdentifier : String = "placeDetailIdentifier"
+    var kcardPlacesIdentifier : String = "cardPlacesIdentifier"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -171,21 +175,21 @@ extension PlacesViewController : UITableViewDelegate, UITableViewDataSource {
         case .category:
             let cell = tableView.dequeueReusableCell(withIdentifier: "categoryPlaceCell") as! CategoryPlaceCell
             cell.nameCategory.text = placesList[indexPath.row].name
-            if placesList[indexPath.row].image != nil && placesList[indexPath.row].image != ""{
+            if placesList[indexPath.row].image != ""{
                 cell.imageCategory?.af_setImage(withURL: URL(string: placesList[indexPath.row].image)!)
             }
             return cell
         case .nearMe:
             let cell = tableView.dequeueReusableCell(withIdentifier: "nearPlaceCell") as! NearPlaceCell
             cell.namePlace.text = placesNearMe[indexPath.row].name
-            if placesNearMe[indexPath.row].photo != nil && placesNearMe[indexPath.row].photo != ""{
+            if placesNearMe[indexPath.row].photo != ""{
                 cell.imagePlace?.af_setImage(withURL: URL(string: placesNearMe[indexPath.row].photo)!)
             }
             return cell
         case .discount:
             let cell = tableView.dequeueReusableCell(withIdentifier: "discountPlaceCell") as! DiscountPlaceCell
             cell.nameDiscount.text = discountList[indexPath.row].name
-            if discountList[indexPath.row].photo != nil && discountList[indexPath.row].photo != ""{
+            if discountList[indexPath.row].photo != ""{
                 cell.backgroundDiscount.af_setImage(withURL: URL(string: discountList[indexPath.row].photo)!)
             }
             return cell
@@ -203,11 +207,14 @@ extension PlacesViewController : UITableViewDelegate, UITableViewDataSource {
             subcategoryName = placesList[indexPath.row].name
             performSegue(withIdentifier: self.kshowPlaceListSegue, sender: self)
         case .nearMe:
+            placeNearMeId = String(placesNearMe[indexPath.row].id)
+            performSegue(withIdentifier: self.kplaceDetailIdentifier, sender: self)
             break
         case .discount:
+            cardId = String(discountList[indexPath.row].id)
+            performSegue(withIdentifier: self.kcardPlacesIdentifier, sender: self)
             break
         }
-        //performSegue(withIdentifier: self.kShowOrderDetailSegueIdentifier, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -216,6 +223,14 @@ extension PlacesViewController : UITableViewDelegate, UITableViewDataSource {
             if let controller = segue.destination as? PlaceListViewController {
                 controller.subcategoryId = self.subcategoryId!
                 controller.subcategoryName = self.subcategoryName!
+            }
+        case kplaceDetailIdentifier:
+            if let controller = segue.destination as? PlaceDetailViewController{
+                controller.placeId = self.placeNearMeId!
+            }
+        case kcardPlacesIdentifier:
+            if let controller = segue.destination as? PlacesByCardViewController{
+                controller.cardId = self.cardId!
             }
         default:
             break
