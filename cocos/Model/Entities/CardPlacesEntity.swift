@@ -31,6 +31,7 @@ class CardPlacesEntity : NSObject {
             entity.name = data["name"].stringValue
             entity.porc = data["porc"].doubleValue
             entity.places = PlacesEntity.getPlacesFromJSONArray(fromJSONArray: data["restaurants"].arrayValue)!
+            return entity
         }
         return nil
     }

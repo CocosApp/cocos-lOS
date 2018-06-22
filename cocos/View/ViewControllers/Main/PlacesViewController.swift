@@ -34,6 +34,7 @@ class PlacesViewController: BaseUIViewController {
     var subcategoryName : String?
     var placeNearMeId : String?
     var cardId : String?
+    var cardName : String?
     
     var kshowPlaceListSegue : String = "showPlaceListSegue"
     var kplaceDetailIdentifier : String = "placeDetailIdentifier"
@@ -212,6 +213,7 @@ extension PlacesViewController : UITableViewDelegate, UITableViewDataSource {
             break
         case .discount:
             cardId = String(discountList[indexPath.row].id)
+            cardName = discountList[indexPath.row].name
             performSegue(withIdentifier: self.kcardPlacesIdentifier, sender: self)
             break
         }
@@ -231,6 +233,7 @@ extension PlacesViewController : UITableViewDelegate, UITableViewDataSource {
         case kcardPlacesIdentifier:
             if let controller = segue.destination as? PlacesByCardViewController{
                 controller.cardId = self.cardId!
+                controller.cardName = self.cardName!
             }
         default:
             break
