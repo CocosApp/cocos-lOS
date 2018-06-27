@@ -18,4 +18,13 @@ class PlaceDetailController : NSObject {
             success(entity!)
         }, failure: failure)
     }
+    
+    func addFavoritePlace(placeId:String, success: @escaping (_ response:NSDictionary)->Void,failure: @escaping (_ error: NSError)->Void){
+        let user : UserEntity = UserEntity.retriveArchiveUser()!
+        FavoriteService.sharedService.addFavoritePlace(token: user.token,idPlace:placeId, success: { (response) in
+            let entity = response.dictionaryValue
+            success(entity as NSDictionary)
+        },failure: failure)
+    }
+    
 }

@@ -554,10 +554,10 @@
             </objects>
             <point key="canvasLocation" x="-470" y="-63"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar Controller-->
         <scene sceneID="HjY-Bl-Y3F">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="e3Y-nT-GTj" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="e3Y-nT-GTj" customClass="CustomTabBarController" customModule="cocos" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="n65-jE-2K0"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NNd-og-Jng">
@@ -709,7 +709,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ccS-KR-GDE"/>
                                 </constraints>
-                                <state key="normal" title="Viaja con Uber">
+                                <state key="normal" title="Solicitar un viaje">
                                     <color key="titleColor" name="White"/>
                                 </state>
                                 <connections>
@@ -895,7 +895,7 @@
                                                             </attributedString>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qO-aE-bzP">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qO-aE-bzP">
                                                             <rect key="frame" x="250" y="5" width="90" height="70"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="90" id="QhK-Kn-i57"/>
@@ -1001,15 +1001,22 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldv-dj-vwC">
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="blJ-FY-fO6" firstAttribute="centerY" secondItem="fHT-Wn-ufB" secondAttribute="centerY" id="1gA-97-cCG"/>
                                                         <constraint firstItem="lkA-5d-tKh" firstAttribute="centerY" secondItem="fHT-Wn-ufB" secondAttribute="centerY" id="4FS-tN-0WH"/>
+                                                        <constraint firstItem="ldv-dj-vwC" firstAttribute="top" secondItem="fHT-Wn-ufB" secondAttribute="top" id="4Gk-Ob-iXS"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ldv-dj-vwC" secondAttribute="trailing" id="E7c-fo-jeV"/>
                                                         <constraint firstAttribute="trailing" secondItem="lkA-5d-tKh" secondAttribute="trailing" id="Fh1-Sn-idn"/>
                                                         <constraint firstItem="blJ-FY-fO6" firstAttribute="leading" secondItem="fHT-Wn-ufB" secondAttribute="leading" constant="5" id="G8m-9s-n6N"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ldv-dj-vwC" secondAttribute="bottom" id="JX2-B7-64Q"/>
                                                         <constraint firstItem="lkA-5d-tKh" firstAttribute="leading" secondItem="blJ-FY-fO6" secondAttribute="trailing" constant="5" id="PqY-ef-ctk"/>
                                                         <constraint firstAttribute="height" constant="30" id="VA3-JO-qG8"/>
+                                                        <constraint firstItem="ldv-dj-vwC" firstAttribute="leading" secondItem="fHT-Wn-ufB" secondAttribute="leading" id="Y7k-3o-RS8"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -1108,7 +1115,7 @@
                             </barButtonItem>
                             <barButtonItem title="Item" image="like_off" id="QfT-bc-0Cf">
                                 <connections>
-                                    <action selector="likeButtonDidSelect:" destination="cuS-oo-XaQ" id="LaA-V0-0gu"/>
+                                    <action selector="likeButtonDidSelect:" destination="cuS-oo-XaQ" id="Imt-b5-YvG"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -1118,11 +1125,20 @@
                         <outlet property="dataTableView" destination="q0F-LM-P2G" id="kQv-mW-tfa"/>
                         <outlet property="likeBarButtonItem" destination="QfT-bc-0Cf" id="4F0-MP-uYw"/>
                         <outlet property="pagerImage" destination="LyV-Tn-xRq" id="p2v-Pz-rv7"/>
+                        <segue destination="uod-pc-daV" kind="presentation" identifier="showCarPopUpIdentifier" modalPresentationStyle="overFullScreen" id="18k-Y1-zCZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swH-ga-eJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2669.5999999999999" y="53.973013493253376"/>
+        </scene>
+        <!--CarPopUp-->
+        <scene sceneID="vsX-Pp-jC3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CarPopUp" id="uod-pc-daV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4sz-Oe-hdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3563" y="-32"/>
         </scene>
         <!--Cocos-->
         <scene sceneID="1Wa-95-MT1">
@@ -1421,7 +1437,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hfe-2d-mbH"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Perfil" image="account" id="YCf-BM-GY3"/>
+                    <tabBarItem key="tabBarItem" title="Perfil" image="account" selectedImage="account" id="YCf-BM-GY3"/>
                     <navigationItem key="navigationItem" id="usm-UJ-BNS"/>
                     <connections>
                         <outlet property="emailLabel" destination="MCm-8c-lAd" id="pHx-Dw-m9T"/>

@@ -29,7 +29,7 @@ class DescriptionPlaceCell : UITableViewCell{
     }
     func setup(){
         locationLabel.text = placeDetail.address
-        if placeDetail.schedule != nil && placeDetail.schedule.count>0{
+        if placeDetail.schedule.count>0{
             timeServiceLabel.text = placeDetail.schedule[0].name
         }
         phoneLabel.text = placeDetail.mobile
@@ -42,9 +42,15 @@ class DescriptionPlaceCell : UITableViewCell{
     }
     
     @IBAction func getWhatsappLink(_ sender:UIButton){
-        let whatsappURL = URL(string: "https://api.whatsapp.com/send?phone=\(whatsAppNumber)&text=Invitation")
-        if UIApplication.shared.canOpenURL(whatsappURL!) {
-            UIApplication.shared.open(whatsappURL!,options:[:],completionHandler:nil)
+        if let whatsappURL = URL(string: "https://api.whatsapp.com/send?phone=\(whatsAppNumber)&text=Invitation"){
+            if UIApplication.shared.canOpenURL(whatsappURL) {
+                UIApplication.shared.open(whatsappURL,options:[:],completionHandler:nil)
+            }
+            else {
+                if UIApplication.shared.canOpenURL(URL(string: "https://itunes.apple.com/pe/app/whatsapp-messenger/id310633997")!) {
+                    UIApplication.shared.open(URL(string: "https://itunes.apple.com/pe/app/whatsapp-messenger/id310633997")!, options: [:], completionHandler: nil)
+                }
+            }
         }
     }
     
@@ -53,7 +59,9 @@ class DescriptionPlaceCell : UITableViewCell{
             UIApplication.shared.open(URL(string:
                 "comgooglemaps://?saddr=&daddr=\(placeDetail.latitude),\(placeDetail.longitude)&directionsmode=driving")!, options: [:], completionHandler: nil)
         } else {
-            print("Can't use comgooglemaps://");
+            if UIApplication.shared.canOpenURL(URL(string: "https://itunes.apple.com/pe/app/google-maps/id585027354")!) {
+                UIApplication.shared.open(URL(string: "https://itunes.apple.com/pe/app/google-maps/id585027354")!, options: [:], completionHandler: nil)
+            }
         }
     
     }

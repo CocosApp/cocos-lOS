@@ -21,6 +21,8 @@ class PlaceDetailViewController : UIViewController {
     @IBOutlet weak var likeBarButtonItem: UIBarButtonItem!
     var state = PlaceDetailButtonSelected.data
     var placeId : String!
+    var user : UserEntity!
+    let kshowCarPopUpIdentifier : String = "showCarPopUpIdentifier"
     var promotionCellIdentifier : String = "promotionPlaceCell"
     var descriptionCellIdentifier : String = "descriptionPlaceCell"
     var placeDetail = PlaceDetailEntity(){
@@ -33,6 +35,7 @@ class PlaceDetailViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        user = UserEntity.retriveArchiveUser()
         self.pagerImage.dataSource = self
         self.loadData()
     }
@@ -40,22 +43,45 @@ class PlaceDetailViewController : UIViewController {
     @IBAction func promotionButtonDidSelect(_ sender:UIButton){
         self.reloadData(data: .promotion)
     }
+    
     @IBAction func dataButtonDidSelect(_ sender:UIButton){
         self.reloadData(data: .data)
     }
+    
     @IBAction func uberDriveButtonDidSelect(_ sender: UIButton){
-        
+        performSegue(withIdentifier: kshowCarPopUpIdentifier, sender: self)
     }
+    
     @IBAction func callPlaceButtonDidSelect(_ sender: UIButton){
-        
-    }
-    @IBAction func likeButtonDidSelect(_ sender: UIBarButtonItem) {
+        if let url = URL(string: "tel://\(self.placeDetail.mobile)"), UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
     }
     
     func reloadData(data : PlaceDetailButtonSelected){
         self.state = data
         self.dataTableView.reloadData()
     }
+    
+    @IBAction func likeButtonDidSelect(_ sender: UIBarButtonItem) {
+        if user.firstName == "INVITADO"{
+            self.showErrorMessage(withTitle: "No se puede agregar a favoritos como invitado, por favor registrarse para continuar")
+        }
+        else{
+            let controller = PlaceDetailController.controller
+            controller.addFavoritePlace(placeId: placeId, success: { (response) in
+                
+            }) { (error) in
+                self.showErrorMessage(withTitle: "Usted ya cuenta con este restaurante como favorito")
+            }
+        }
+    }
+    
+    
     @IBAction func shareButtonDidSelect(_ sender: UIBarButtonItem) {
         if let image = self.placeDetail.photo1 {
             self.downloadShareImage(imageUrl: image)

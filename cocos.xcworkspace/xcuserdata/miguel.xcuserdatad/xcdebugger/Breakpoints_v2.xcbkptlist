@@ -426,7 +426,7 @@
                   moduleName = "cocos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/FavoriteController.swift"
-                  timestampString = "550970022.242842"
+                  timestampString = "551828908.722483"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -441,7 +441,7 @@
                   moduleName = "cocos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/FavoriteController.swift"
-                  timestampString = "550970022.245506"
+                  timestampString = "551828908.725208"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -474,11 +474,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551379721.577461"
+            timestampString = "551830367.1611069"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "downloadShareImage(imageUrl:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -490,11 +490,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551379721.577544"
+            timestampString = "551830367.161306"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "downloadShareImage(imageUrl:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -506,11 +506,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551379721.577619"
+            timestampString = "551830367.161419"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "downloadShareImage(imageUrl:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -522,11 +522,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551379721.5777"
+            timestampString = "551830367.1615289"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "downloadShareImage(imageUrl:)"
             landmarkType = "7">
             <Locations>
@@ -570,11 +570,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551379721.577763"
+            timestampString = "551830367.1616091"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "shareButtonDidSelect(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -586,11 +586,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551379721.577841"
+            timestampString = "551830367.161731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "shareButtonDidSelect(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -634,11 +634,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551379721.577961"
+            timestampString = "551830367.161891"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "downloadShareImage(imageUrl:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -650,7 +650,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Controller/PlaceDetailController.swift"
-            timestampString = "550863738.878529"
+            timestampString = "551830367.162042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
@@ -698,11 +698,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551379721.5781111"
+            timestampString = "551830367.1622109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -714,11 +714,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551379721.578174"
+            timestampString = "551830367.162302"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "promotionButtonDidSelect(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -730,11 +730,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551379721.578233"
+            timestampString = "551830367.1624531"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -746,11 +746,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551379721.578307"
+            timestampString = "551830367.162568"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -762,11 +762,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551379721.5783679"
+            timestampString = "551830367.162706"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -778,11 +778,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551379721.578427"
+            timestampString = "551830367.162855"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -794,11 +794,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551379721.578492"
+            timestampString = "551830367.162957"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -976,6 +976,22 @@
             startingLineNumber = "47"
             endingLineNumber = "47"
             landmarkName = "getDetailFromJSON(fromJSON:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/View/Cell/DescriptionPlaceCell.swift"
+            timestampString = "551830367.163368"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "getWhatsappLink(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

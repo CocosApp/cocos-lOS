@@ -58,6 +58,9 @@
 		49C6B9D1201FE83600F390D4 /* cocosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C6B9D0201FE83600F390D4 /* cocosTests.swift */; };
 		49C6B9DC201FE83600F390D4 /* cocosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C6B9DB201FE83600F390D4 /* cocosUITests.swift */; };
 		49C74E652031040A0005EE70 /* UITextfieldWithBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C74E642031040A0005EE70 /* UITextfieldWithBorder.swift */; };
+		49C7902520E3FF9300B57E3E /* CarPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C7902420E3FF9300B57E3E /* CarPopUp.storyboard */; };
+		49C7902720E4020E00B57E3E /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C7902620E4020E00B57E3E /* CustomTabBarController.swift */; };
+		49C7902A20E42F7700B57E3E /* CarPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C7902920E42F7700B57E3E /* CarPopUp.swift */; };
 		49D3ACFD2028EE050079D154 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3ACFC2028EE050079D154 /* IntroViewController.swift */; };
 		49D3ACFF2028F1030079D154 /* BaseableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3ACFE2028F1030079D154 /* BaseableController.swift */; };
 		49D3AD012028F15B0079D154 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3AD002028F15B0079D154 /* BaseViewController.swift */; };
@@ -151,6 +154,9 @@
 		49C6B9DB201FE83600F390D4 /* cocosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cocosUITests.swift; sourceTree = "<group>"; };
 		49C6B9DD201FE83600F390D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49C74E642031040A0005EE70 /* UITextfieldWithBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextfieldWithBorder.swift; sourceTree = "<group>"; };
+		49C7902420E3FF9300B57E3E /* CarPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarPopUp.storyboard; sourceTree = "<group>"; };
+		49C7902620E4020E00B57E3E /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		49C7902920E42F7700B57E3E /* CarPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPopUp.swift; sourceTree = "<group>"; };
 		49D3ACFC2028EE050079D154 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		49D3ACFE2028F1030079D154 /* BaseableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseableController.swift; sourceTree = "<group>"; };
 		49D3AD002028F15B0079D154 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -359,6 +365,7 @@
 				49C6B9C4201FE83600F390D4 /* LaunchScreen.storyboard */,
 				49C6B9BF201FE83500F390D4 /* Main.storyboard */,
 				49C688A3201FFB0000F1E1B3 /* Intro.storyboard */,
+				49C7902420E3FF9300B57E3E /* CarPopUp.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -373,10 +380,12 @@
 		49C688A2201FF75C00F1E1B3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				49C7902820E42EF100B57E3E /* Dialogs */,
 				49622FC920805332007A6D10 /* Main */,
 				49622FC820805306007A6D10 /* Intro */,
 				49D3ACFE2028F1030079D154 /* BaseableController.swift */,
 				49D3AD002028F15B0079D154 /* BaseViewController.swift */,
+				49C7902620E4020E00B57E3E /* CustomTabBarController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -433,6 +442,14 @@
 				49C6B9DD201FE83600F390D4 /* Info.plist */,
 			);
 			path = cocosUITests;
+			sourceTree = "<group>";
+		};
+		49C7902820E42EF100B57E3E /* Dialogs */ = {
+			isa = PBXGroup;
+			children = (
+				49C7902920E42F7700B57E3E /* CarPopUp.swift */,
+			);
+			path = Dialogs;
 			sourceTree = "<group>";
 		};
 		49D3AD032028F1FE0079D154 /* Extensions */ = {
@@ -594,6 +611,7 @@
 				49C6B9C1201FE83500F390D4 /* Main.storyboard in Resources */,
 				49C688A4201FFB0000F1E1B3 /* Intro.storyboard in Resources */,
 				49D3AD0F202A4B900079D154 /* IntroCustomView.xib in Resources */,
+				49C7902520E3FF9300B57E3E /* CarPopUp.storyboard in Resources */,
 				49D3AD0C2028F3270079D154 /* ErrorMessageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -727,6 +745,7 @@
 				49D3ACFF2028F1030079D154 /* BaseableController.swift in Sources */,
 				495747B5208CF93900E84631 /* SearchPlaceViewController.swift in Sources */,
 				49211876205853E200633ECA /* PlacesViewController.swift in Sources */,
+				49C7902A20E42F7700B57E3E /* CarPopUp.swift in Sources */,
 				49844ED320A0D9E000C43FAD /* DescriptionPlaceCell.swift in Sources */,
 				49C6B9BC201FE83500F390D4 /* AppDelegate.swift in Sources */,
 				498F6EE32051E28700382241 /* SubcategoryEntity.swift in Sources */,
@@ -736,6 +755,7 @@
 				494499CA2060617800C8AC97 /* ResponseEntity.swift in Sources */,
 				49622FCD20805E71007A6D10 /* PlaceListViewController.swift in Sources */,
 				490EA7E220DC2C4B001EDD48 /* CardPlacesEntity.swift in Sources */,
+				49C7902720E4020E00B57E3E /* CustomTabBarController.swift in Sources */,
 				49844ED720A0DF2600C43FAD /* PlaceDetailEntity.swift in Sources */,
 				49FAEEFA203E4005000E444A /* UserEntity.swift in Sources */,
 				49026AD0208BD1CF005FFDAF /* FavoriteService.swift in Sources */,
