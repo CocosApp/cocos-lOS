@@ -23,8 +23,10 @@ class PlaceDetailViewController : UIViewController {
     var placeId : String!
     var user : UserEntity!
     let kshowCarPopUpIdentifier : String = "showCarPopUpIdentifier"
-    var promotionCellIdentifier : String = "promotionPlaceCell"
-    var descriptionCellIdentifier : String = "descriptionPlaceCell"
+    let kshowDiscountDescriptionIdentifier : String = "showDiscountDescriptionIdentifier"
+    let promotionCellIdentifier : String = "promotionPlaceCell"
+    let descriptionCellIdentifier : String = "descriptionPlaceCell"
+    var promotionSelected : PromotionEntity!
     var placeDetail = PlaceDetailEntity(){
         didSet{
             self.title = placeDetail.name
@@ -129,6 +131,15 @@ class PlaceDetailViewController : UIViewController {
             self.showErrorMessage(withTitle: error.localizedDescription)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == kshowDiscountDescriptionIdentifier {
+            if let vc = segue.destination as? DiscountDescriptionViewController {
+                vc.promotion = self.promotionSelected
+                vc.templateImage = self.placeDetail.photo1
+            }
+        }
+    }
 }
 extension PlaceDetailViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -150,6 +161,24 @@ extension PlaceDetailViewController : UITableViewDelegate,UITableViewDataSource 
             let cell = tableView.dequeueReusableCell(withIdentifier: promotionCellIdentifier, for: indexPath) as! PromotionPlaceCell
             cell.promotion = placeDetail.discount[indexPath.row]
             return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if state == .promotion {
+            self.promotionSelected = self.placeDetail.discount[indexPath.row]
+            if self.promotionSelected.porc != nil && self.promotionSelected.porc != "" {
+                self.performSegue(withIdentifier: "showDiscountDescriptionIdentifier", sender: self)
+            }
+            else{
+                let customAlert = self.storyboard?.instantiateViewController(withIdentifier: "TermsAndConditionViewController") as! TermsAndConditionViewController
+                customAlert.providesPresentationContextTransitionStyle = true
+                customAlert.definesPresentationContext = true
+                customAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+                customAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+                customAlert.termsAndConditions = self.promotionSelected.terms_condition
+                self.present(customAlert, animated: true, completion: nil)
+            }
         }
     }
     
@@ -186,16 +215,23 @@ extension PlaceDetailViewController : ViewPagerDataSource {
     
     func placeSize()->Int{
         var num : Int = 0
-        if placeDetail.photo1 != nil{
+        if placeDetail.photo1 != nil && placeDetail.photo1 != ""{
             num=num+1
         }
-        if placeDetail.photo2 != nil {
+        if placeDetail.photo2 != nil && placeDetail.photo2 != "" {
             num=num+1
         }
-        if placeDetail.photo3 != nil{
+        if placeDetail.photo3 != nil && placeDetail.photo3 != ""{
             num=num+1
         }
         return num
+    }
+    
+}
+
+extension PlaceDetailViewController : ErrorMessageDelegate {
+    func withError(error: String) {
+        self.showErrorMessage(withTitle: error)
     }
     
     

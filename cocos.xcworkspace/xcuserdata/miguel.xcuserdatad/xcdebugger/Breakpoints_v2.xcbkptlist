@@ -426,7 +426,7 @@
                   moduleName = "cocos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/FavoriteController.swift"
-                  timestampString = "551828908.722483"
+                  timestampString = "551857585.5858949"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -441,7 +441,7 @@
                   moduleName = "cocos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/FavoriteController.swift"
-                  timestampString = "551828908.725208"
+                  timestampString = "551857585.589591"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -474,39 +474,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551830367.1611069"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "downloadShareImage(imageUrl:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551830367.161306"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "downloadShareImage(imageUrl:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551830367.161419"
+            timestampString = "554111532.193992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
@@ -522,11 +490,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551830367.1615289"
+            timestampString = "554111532.1950819"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "downloadShareImage(imageUrl:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
+            timestampString = "554111532.195864"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
             endingLineNumber = "96"
+            landmarkName = "downloadShareImage(imageUrl:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
+            timestampString = "554111532.1965981"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "downloadShareImage(imageUrl:)"
             landmarkType = "7">
             <Locations>
@@ -570,11 +570,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551830367.1616091"
+            timestampString = "554111532.1973259"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "shareButtonDidSelect(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -586,11 +586,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551830367.161731"
+            timestampString = "554111532.198046"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "shareButtonDidSelect(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -602,7 +602,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
-            timestampString = "550976188.717353"
+            timestampString = "554111532.1987669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -618,7 +618,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
-            timestampString = "550976188.7174211"
+            timestampString = "554111532.19892"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -634,11 +634,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551830367.161891"
+            timestampString = "554111532.199065"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "downloadShareImage(imageUrl:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -666,7 +666,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
-            timestampString = "550976188.717579"
+            timestampString = "554111532.199851"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
@@ -682,7 +682,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
-            timestampString = "550976188.717639"
+            timestampString = "554111532.1999969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
@@ -698,11 +698,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551830367.1622109"
+            timestampString = "554111532.20014"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -714,11 +714,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551830367.162302"
+            timestampString = "554111532.200863"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "promotionButtonDidSelect(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -730,11 +730,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551830367.1624531"
+            timestampString = "554111532.201576"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -746,11 +746,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551830367.162568"
+            timestampString = "554111532.202281"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -762,11 +762,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551830367.162706"
+            timestampString = "554111532.202979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -778,11 +778,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551830367.162855"
+            timestampString = "554111532.203675"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -794,11 +794,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlaceDetailViewController.swift"
-            timestampString = "551830367.162957"
+            timestampString = "554111532.204366"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -810,87 +810,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
-            timestampString = "550976188.718099"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "getListFromJSON(fromArray:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
-            timestampString = "550976188.718158"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "getListFromJSON(fromArray:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
-            timestampString = "550976188.718217"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "getListFromJSON(fromArray:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
-            timestampString = "550976188.718277"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "getDetailFromJSON(fromJSON:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
-            timestampString = "550976188.718335"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "getDetailFromJSON(fromJSON:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
-            timestampString = "550976188.7183959"
+            timestampString = "554111532.205067"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
@@ -902,15 +822,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
+            timestampString = "554111532.205215"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "getListFromJSON(fromArray:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
+            timestampString = "554111532.205356"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "getListFromJSON(fromArray:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
-            timestampString = "550976188.718455"
+            timestampString = "554111532.205496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "getDetailFromJSON(fromJSON:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -922,7 +874,39 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
-            timestampString = "550976188.718514"
+            timestampString = "554111532.205636"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "getDetailFromJSON(fromJSON:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
+            timestampString = "554111532.2058001"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "getListFromJSON(fromArray:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
+            timestampString = "554111532.205941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "99"
@@ -938,11 +922,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
-            timestampString = "550976188.718573"
+            timestampString = "554111532.20608"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "getDetailFromJSON(fromJSON:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -954,11 +938,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
-            timestampString = "550976188.718631"
+            timestampString = "554111532.20622"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "getDetailFromJSON(fromJSON:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
+            timestampString = "554111532.20636"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "getDetailFromJSON(fromJSON:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -970,7 +970,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Model/Entities/PlaceDetailEntity.swift"
-            timestampString = "550976188.718691"
+            timestampString = "554111532.2065001"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -986,12 +986,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/Cell/DescriptionPlaceCell.swift"
-            timestampString = "551830367.163368"
+            timestampString = "554111532.206645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
             endingLineNumber = "45"
-            landmarkName = "getWhatsappLink(_:)"
+            landmarkName = "getFacebookLink(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/View/ViewControllers/Main/PlacesViewController.swift"
+            timestampString = "551857585.149672"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "changeColor(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/View/ViewControllers/Main/PlacesViewController.swift"
+            timestampString = "551857585.150332"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "changeColor(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/View/ViewControllers/Main/PlacesViewController.swift"
+            timestampString = "551857585.150739"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "changeColor(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

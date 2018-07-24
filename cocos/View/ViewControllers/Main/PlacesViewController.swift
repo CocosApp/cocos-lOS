@@ -42,6 +42,9 @@ class PlacesViewController: BaseUIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        changeColor(categoryButton, true)
+        changeColor(nearMeButton, false)
+        changeColor(discountsButton, false)
         startService()
     }
     
@@ -119,10 +122,31 @@ class PlacesViewController: BaseUIViewController {
     
     fileprivate func changeColor(_ button : UIButton,_ type: Bool){
         if type {
-            button.backgroundColor = UIColor(red: 207/255, green: 2/255, blue: 9/255, alpha: 1)
+            let gradient: CAGradientLayer = CAGradientLayer()
+            gradient.frame = button.bounds
+            gradient.colors = [
+                UIColor(red:255/255,green:255/255,blue:255/255,alpha:1).cgColor,
+                UIColor(red:255/255,green:255/255,blue:255/255,alpha:1).cgColor,
+                UIColor(red:0/255,green:0/255,blue:0/255,alpha:1).cgColor,
+                UIColor(red:0/255,green:0/255,blue:0/255,alpha:1).cgColor
+            ]
+            
+            /* repeat the central location to have solid colors */
+            gradient.locations = [0, 0.9, 0.9, 1.0]
+            
+            /* make it vertical */
+            gradient.startPoint = CGPoint(x:0.5,y: 0)
+            gradient.endPoint = CGPoint(x:0.5,y: 1)
+            
+            button.layer.insertSublayer(gradient, at: 0)
         }
         else{
-            button.backgroundColor = UIColor.white
+            if let layers = button.layer.sublayers{
+                if layers.count>1{
+                    layers[0].removeFromSuperlayer()
+                }
+            }
+            button.backgroundColor = UIColor(red:255/255,green:255/255,blue:255/255,alpha:1)
         }
     }
     

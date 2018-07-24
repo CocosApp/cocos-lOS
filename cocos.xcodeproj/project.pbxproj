@@ -40,6 +40,8 @@
 		49844ED720A0DF2600C43FAD /* PlaceDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49844ED620A0DF2600C43FAD /* PlaceDetailEntity.swift */; };
 		49844ED920A0E1B900C43FAD /* PlaceDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49844ED820A0E1B900C43FAD /* PlaceDetailService.swift */; };
 		49844EDB20A0E36100C43FAD /* PlaceDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49844EDA20A0E36100C43FAD /* PlaceDetailController.swift */; };
+		4985EE4721070861008E5950 /* DiscountDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985EE4621070861008E5950 /* DiscountDescriptionViewController.swift */; };
+		4985EE4921070F07008E5950 /* TermsAndConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985EE4821070F07008E5950 /* TermsAndConditionViewController.swift */; };
 		498F6EDF2051DA1E00382241 /* PlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F6EDE2051DA1E00382241 /* PlacesService.swift */; };
 		498F6EE12051E21C00382241 /* PlacesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F6EE02051E21C00382241 /* PlacesEntity.swift */; };
 		498F6EE32051E28700382241 /* SubcategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F6EE22051E28700382241 /* SubcategoryEntity.swift */; };
@@ -61,6 +63,7 @@
 		49C7902520E3FF9300B57E3E /* CarPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C7902420E3FF9300B57E3E /* CarPopUp.storyboard */; };
 		49C7902720E4020E00B57E3E /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C7902620E4020E00B57E3E /* CustomTabBarController.swift */; };
 		49C7902A20E42F7700B57E3E /* CarPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C7902920E42F7700B57E3E /* CarPopUp.swift */; };
+		49C7902D20E448D500B57E3E /* ErrorMessageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C7902C20E448D500B57E3E /* ErrorMessageDelegate.swift */; };
 		49D3ACFD2028EE050079D154 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3ACFC2028EE050079D154 /* IntroViewController.swift */; };
 		49D3ACFF2028F1030079D154 /* BaseableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3ACFE2028F1030079D154 /* BaseableController.swift */; };
 		49D3AD012028F15B0079D154 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3AD002028F15B0079D154 /* BaseViewController.swift */; };
@@ -130,6 +133,8 @@
 		49844ED620A0DF2600C43FAD /* PlaceDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailEntity.swift; sourceTree = "<group>"; };
 		49844ED820A0E1B900C43FAD /* PlaceDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailService.swift; sourceTree = "<group>"; };
 		49844EDA20A0E36100C43FAD /* PlaceDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailController.swift; sourceTree = "<group>"; };
+		4985EE4621070861008E5950 /* DiscountDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountDescriptionViewController.swift; sourceTree = "<group>"; };
+		4985EE4821070F07008E5950 /* TermsAndConditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionViewController.swift; sourceTree = "<group>"; };
 		498F6EDE2051DA1E00382241 /* PlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesService.swift; sourceTree = "<group>"; };
 		498F6EE02051E21C00382241 /* PlacesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesEntity.swift; sourceTree = "<group>"; };
 		498F6EE22051E28700382241 /* SubcategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryEntity.swift; sourceTree = "<group>"; };
@@ -157,6 +162,7 @@
 		49C7902420E3FF9300B57E3E /* CarPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarPopUp.storyboard; sourceTree = "<group>"; };
 		49C7902620E4020E00B57E3E /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		49C7902920E42F7700B57E3E /* CarPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPopUp.swift; sourceTree = "<group>"; };
+		49C7902C20E448D500B57E3E /* ErrorMessageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageDelegate.swift; sourceTree = "<group>"; };
 		49D3ACFC2028EE050079D154 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		49D3ACFE2028F1030079D154 /* BaseableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseableController.swift; sourceTree = "<group>"; };
 		49D3AD002028F15B0079D154 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +236,8 @@
 				495747B4208CF93900E84631 /* SearchPlaceViewController.swift */,
 				49844ED420A0DCE400C43FAD /* PlaceDetailViewController.swift */,
 				490EA7E420DC4CBD001EDD48 /* PlacesByCardViewController.swift */,
+				4985EE4621070861008E5950 /* DiscountDescriptionViewController.swift */,
+				4985EE4821070F07008E5950 /* TermsAndConditionViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -272,6 +280,7 @@
 		49C68899201FF69E00F1E1B3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				49C7902B20E448A800B57E3E /* Delegates */,
 				49FAEEF7203E3994000E444A /* LoginController.swift */,
 				49988708204DC3A000C59A64 /* RegisterController.swift */,
 				495DDF2B205C727400548893 /* PlacesController.swift */,
@@ -450,6 +459,14 @@
 				49C7902920E42F7700B57E3E /* CarPopUp.swift */,
 			);
 			path = Dialogs;
+			sourceTree = "<group>";
+		};
+		49C7902B20E448A800B57E3E /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				49C7902C20E448D500B57E3E /* ErrorMessageDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		49D3AD032028F1FE0079D154 /* Extensions */ = {
@@ -735,6 +752,7 @@
 				495DDF2C205C727400548893 /* PlacesController.swift in Sources */,
 				495747B3208CF76100E84631 /* SearchPlaceListCell.swift in Sources */,
 				49622FCF2080848A007A6D10 /* PlaceListController.swift in Sources */,
+				49C7902D20E448D500B57E3E /* ErrorMessageDelegate.swift in Sources */,
 				4921187C20585C7100633ECA /* DiscountPlaceCell.swift in Sources */,
 				495747B1208C852E00E84631 /* FavoritePlaceEntity.swift in Sources */,
 				49C74E652031040A0005EE70 /* UITextfieldWithBorder.swift in Sources */,
@@ -763,9 +781,11 @@
 				49844EDB20A0E36100C43FAD /* PlaceDetailController.swift in Sources */,
 				49988709204DC3A000C59A64 /* RegisterController.swift in Sources */,
 				495747AF208C6FEB00E84631 /* ProfileViewController.swift in Sources */,
+				4985EE4721070861008E5950 /* DiscountDescriptionViewController.swift in Sources */,
 				49622FCB20805AEF007A6D10 /* PlaceListCell.swift in Sources */,
 				490EA7DF20DC223E001EDD48 /* PlacesByCardController.swift in Sources */,
 				499E63382027E87900B88867 /* ViewPager.swift in Sources */,
+				4985EE4921070F07008E5950 /* TermsAndConditionViewController.swift in Sources */,
 				495747AD208C6CF300E84631 /* AboutViewController.swift in Sources */,
 				498F6EDF2051DA1E00382241 /* PlacesService.swift in Sources */,
 				49D3AD012028F15B0079D154 /* BaseViewController.swift in Sources */,

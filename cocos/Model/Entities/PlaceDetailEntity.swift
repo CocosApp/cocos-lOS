@@ -79,6 +79,11 @@ class PromotionEntity : NSObject {
     var id : String!
     var name : String!
     var porc : Float = 0
+    var price : Float = 0
+    var promotion : String!
+    var photo : String!
+    var descrip : String!
+    var terms_condition : String!
     
     class func getListFromJSON(fromArray jsonArray : [JSON]?) -> [PromotionEntity]?{
         var discount : [PromotionEntity] = []
@@ -98,6 +103,11 @@ class PromotionEntity : NSObject {
         discount.id = data["id"].stringValue
         discount.name = data["name"].stringValue
         discount.porc = data["porc"].floatValue
+        discount.price = data["price"].floatValue
+        discount.promotion = data["promotion"].stringValue
+        discount.terms_condition = data["terms_condition"].stringValue
+        discount.descrip = data["descrip"].stringValue
+        discount.photo = data["photo"].stringValue
         return discount
     }
 }

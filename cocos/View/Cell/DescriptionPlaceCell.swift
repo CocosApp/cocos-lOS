@@ -22,6 +22,7 @@ class DescriptionPlaceCell : UITableViewCell{
     var whatsAppNumber : String!
     var latitude: Double = 0.0
     var longitude: Double = 0.0
+    var placeDetailDelegate : ErrorMessageDelegate!
     var placeDetail = PlaceDetailEntity(){
         didSet{
             self.setup()
@@ -38,7 +39,16 @@ class DescriptionPlaceCell : UITableViewCell{
     }
     
     @IBAction func getFacebookLink(_ sender:UIButton){
-        UIApplication.shared.open(URL(string: facebookLink)!, options: [:], completionHandler: nil)
+        if let facebookUrl = URL(string: facebookLink){
+            if UIApplication.shared.canOpenURL(facebookUrl){
+                UIApplication.shared.open(facebookUrl, options: [:], completionHandler: nil)
+            }
+        }
+        else {
+            if UIApplication.shared.canOpenURL(URL(string: "https://itunes.apple.com/pe/app/facebook/id284882215")!) {
+                UIApplication.shared.open(URL(string: "https://itunes.apple.com/pe/app/facebook/id284882215")!, options: [:], completionHandler: nil)
+            }
+        }
     }
     
     @IBAction func getWhatsappLink(_ sender:UIButton){
@@ -51,6 +61,9 @@ class DescriptionPlaceCell : UITableViewCell{
                     UIApplication.shared.open(URL(string: "https://itunes.apple.com/pe/app/whatsapp-messenger/id310633997")!, options: [:], completionHandler: nil)
                 }
             }
+        }
+        else {
+            self.placeDetailDelegate.withError(error: "Este lugar no posee número de whastapp")
         }
     }
     
@@ -65,4 +78,9 @@ class DescriptionPlaceCell : UITableViewCell{
         }
     
     }
+    
+    @IBAction func downloadMenuPDFButtonDidSelect(_ sender: Any) {
+        
+    }
+    
 }
