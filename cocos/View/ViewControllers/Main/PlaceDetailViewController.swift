@@ -167,7 +167,7 @@ extension PlaceDetailViewController : UITableViewDelegate,UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if state == .promotion {
             self.promotionSelected = self.placeDetail.discount[indexPath.row]
-            if self.promotionSelected.porc != nil && self.promotionSelected.porc != "" {
+            if self.promotionSelected.porc != nil {
                 self.performSegue(withIdentifier: "showDiscountDescriptionIdentifier", sender: self)
             }
             else{
