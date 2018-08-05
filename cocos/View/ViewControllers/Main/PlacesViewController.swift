@@ -9,6 +9,7 @@
 import UIKit
 import AlamofireImage
 import CoreLocation
+import UIScrollView_InfiniteScroll
 
 enum PlacesButtonSelected {
     case category
@@ -35,7 +36,9 @@ class PlacesViewController: BaseUIViewController {
     var placeNearMeId : String?
     var cardId : String?
     var cardName : String?
+    var isLoading : Bool = false
     
+    let user : UserEntity = UserEntity.retriveArchiveUser()!
     var kshowPlaceListSegue : String = "showPlaceListSegue"
     var kplaceDetailIdentifier : String = "placeDetailIdentifier"
     var kcardPlacesIdentifier : String = "cardPlacesIdentifier"
@@ -45,6 +48,7 @@ class PlacesViewController: BaseUIViewController {
         changeColor(categoryButton, true)
         changeColor(nearMeButton, false)
         changeColor(discountsButton, false)
+        setupTableView()
         startService()
     }
     
@@ -64,6 +68,17 @@ class PlacesViewController: BaseUIViewController {
     }
     @IBAction func discountsButtonDidSelect(_ sender: UIButton) {
         selectButton(PlacesButtonSelected.discount)
+    }
+    
+    fileprivate func setupTableView(){
+        let loadingNib = UINib(nibName: "LoadListTableViewCell", bundle: nil)
+        placesTableView.register(loadingNib, forCellReuseIdentifier: "LoadListTableViewCell")
+        placesTableView.addInfiniteScroll { (tableView) -> Void in
+                // update table view
+                self.nextPage()
+                // finish infinite scroll animation
+                tableView.finishInfiniteScroll()
+        }
     }
     
     fileprivate func selectButton(_ typeButton : PlacesButtonSelected){
@@ -151,7 +166,6 @@ class PlacesViewController: BaseUIViewController {
     }
     
     func startService(){
-        let user : UserEntity = UserEntity.retriveArchiveUser()!
         switch buttonSelected {
         case .category:
             controller.getSubcategoryList(user.token, success: { (places) in
@@ -180,69 +194,6 @@ class PlacesViewController: BaseUIViewController {
         }
     }
     
-}
-
-extension PlacesViewController : UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch buttonSelected {
-        case .category:
-            return placesList.count
-        case .nearMe:
-            return placesNearMe.count
-        case .discount:
-            return discountList.count
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch buttonSelected {
-        case .category:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "categoryPlaceCell") as! CategoryPlaceCell
-            cell.nameCategory.text = placesList[indexPath.row].name
-            if placesList[indexPath.row].image != ""{
-                cell.imageCategory?.af_setImage(withURL: URL(string: placesList[indexPath.row].image)!)
-            }
-            return cell
-        case .nearMe:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "nearPlaceCell") as! NearPlaceCell
-            cell.namePlace.text = placesNearMe[indexPath.row].name
-            if placesNearMe[indexPath.row].photo != ""{
-                cell.imagePlace?.af_setImage(withURL: URL(string: placesNearMe[indexPath.row].photo)!)
-            }
-            return cell
-        case .discount:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "discountPlaceCell") as! DiscountPlaceCell
-            cell.nameDiscount.text = discountList[indexPath.row].name
-            if discountList[indexPath.row].photo != ""{
-                cell.backgroundDiscount.af_setImage(withURL: URL(string: discountList[indexPath.row].photo)!)
-            }
-            return cell
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch buttonSelected {
-        case .category:
-            subcategoryId = placesList[indexPath.row].id
-            subcategoryName = placesList[indexPath.row].name
-            performSegue(withIdentifier: self.kshowPlaceListSegue, sender: self)
-        case .nearMe:
-            placeNearMeId = String(placesNearMe[indexPath.row].id)
-            performSegue(withIdentifier: self.kplaceDetailIdentifier, sender: self)
-            break
-        case .discount:
-            cardId = String(discountList[indexPath.row].id)
-            cardName = discountList[indexPath.row].name
-            performSegue(withIdentifier: self.kcardPlacesIdentifier, sender: self)
-            break
-        }
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case kshowPlaceListSegue:
@@ -263,4 +214,122 @@ extension PlacesViewController : UITableViewDelegate, UITableViewDataSource {
             break
         }
     }
+    
+}
+
+extension PlacesViewController : UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0{
+            switch buttonSelected {
+            case .category:
+                return placesList.count
+            case .nearMe:
+                return placesNearMe.count
+            case .discount:
+                return discountList.count
+            }
+        }
+        else if section == 1 && isLoading {
+            return 1
+        }
+        else {
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            switch buttonSelected {
+            case .category:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "categoryPlaceCell") as! CategoryPlaceCell
+                cell.nameCategory.text = placesList[indexPath.row].name
+                if placesList[indexPath.row].image != ""{
+                    cell.imageCategory?.af_setImage(withURL: URL(string: placesList[indexPath.row].image)!)
+                }
+                return cell
+            case .nearMe:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "nearPlaceCell") as! NearPlaceCell
+                cell.namePlace.text = placesNearMe[indexPath.row].name
+                if placesNearMe[indexPath.row].photo != ""{
+                    cell.imagePlace?.af_setImage(withURL: URL(string: placesNearMe[indexPath.row].photo)!)
+                }
+                return cell
+            case .discount:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "discountPlaceCell") as! DiscountPlaceCell
+                cell.nameDiscount.text = discountList[indexPath.row].name
+                if discountList[indexPath.row].photo != ""{
+                    cell.backgroundDiscount.af_setImage(withURL: URL(string: discountList[indexPath.row].photo)!)
+                }
+                return cell
+            }
+        }
+        else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LoadListTableViewCell") as! LoadListTableViewCell
+            cell.loader.startAnimating()
+            return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0{
+            return 150
+        }
+        else {
+            return 60
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            switch buttonSelected {
+            case .category:
+                subcategoryId = placesList[indexPath.row].id
+                subcategoryName = placesList[indexPath.row].name
+                performSegue(withIdentifier: self.kshowPlaceListSegue, sender: self)
+            case .nearMe:
+                placeNearMeId = String(placesNearMe[indexPath.row].id)
+                performSegue(withIdentifier: self.kplaceDetailIdentifier, sender: self)
+                break
+            case .discount:
+                cardId = String(discountList[indexPath.row].id)
+                cardName = discountList[indexPath.row].name
+                performSegue(withIdentifier: self.kcardPlacesIdentifier, sender: self)
+                break
+            }
+        }
+    }
+    
+    //MARK: - Infinite Scrolling
+    
+    fileprivate func nextPage(){
+        placesTableView.reloadSections(IndexSet(integer: 1), with: .none)
+        switch buttonSelected {
+        case .category:
+            controller.getNextSubcategoryList(user.token, success: { (places) in
+                self.placesList.append(contentsOf: places)
+                self.placesTableView.reloadData()
+            }) { (error : NSError) in
+                self.showErrorMessage(withTitle: error.localizedDescription)
+            }
+        case .nearMe:
+            controller.getNextPlacesByPosition(user.token, lat: self.lat, long: self.long, success: { (places) in
+                self.placesNearMe.append(contentsOf: places)
+                self.placesTableView.reloadData()
+            }) { (error:NSError) in
+                self.showErrorMessage(withTitle: error.localizedDescription)
+            }
+        case .discount:
+            controller.getNextDiscounts(user.token, success: { (card) in
+                self.discountList.append(contentsOf: card)
+                self.placesTableView.reloadData()
+            }) { (error:NSError) in
+                self.showErrorMessage(withTitle: error.localizedDescription)
+            }
+        }
+    }
+    
 }

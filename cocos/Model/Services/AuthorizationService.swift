@@ -33,7 +33,7 @@ class AuthorizationService : BaseService {
     }
     
     func login(email:String, password:String, success: @escaping SuccessResponse, failure: @escaping FailureResponse){
-        let params = ["email":email,"password":password]
+        let params : [String:String] = ["email":email,"password":password]
         self.POST(withEndpoint: AuthorizationEndpoints.login.rawValue, params: params, headers: nil, success: success, failure: failure)
     }
     

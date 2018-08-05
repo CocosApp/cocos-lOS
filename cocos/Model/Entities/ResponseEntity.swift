@@ -10,7 +10,7 @@ import SwiftyJSON
 
 class ResponseEntityPlaces : NSObject {
     var count: Int = 0
-    var next:String = ""
+    var next:String?
     var results:[PlacesEntity] = []
     
     class func getResponseFromJSON(fromJSON json:JSON?)->ResponseEntityPlaces?{

@@ -27,14 +27,40 @@ class PlacesService : BaseService {
         self.GET(withEndpoint: PlacesEndpoints.placesList.rawValue, params: nil, headers: header, success: success, failure: failure)
     }
     
+    func getPlaceList(token: String, page : String,success: @escaping SuccessResponse, failure: @escaping FailureResponse){
+        let header = authorizationHeader(withToken: token)
+        let paging: String = "/page=\(page)"
+        self.GET(withEndpoint: "\(PlacesEndpoints.placesList.rawValue)\(paging)", params: nil, headers: header, success: success, failure: failure)
+    }
+    
+    func getPlaceList(token: String,endpoint:String,success: @escaping SuccessResponse, failure: @escaping FailureResponse){
+        let header = authorizationHeader(withToken: token)
+        self.GETPagination(withEndpoint: endpoint, params: nil, headers: header, success: success, failure: failure)
+    }
+    
     func getSubcategoryList(token: String,success: @escaping SuccessResponse, failure: @escaping FailureResponse){
         let header = authorizationHeader(withToken: token)
         self.GET(withEndpoint: PlacesEndpoints.placeSubcategoryList.rawValue, params: nil, headers: header, success: success, failure: failure)
     }
     
+    func getSubcategoryList(token: String,endpoint:String ,success: @escaping SuccessResponse, failure: @escaping FailureResponse){
+        let header = authorizationHeader(withToken: token)
+        self.GETPagination(withEndpoint: endpoint, params: nil, headers: header, success: success, failure: failure)
+    }
+    
     func getPlacesByGPS(token:String,lat:String,long:String,success:@escaping SuccessResponse, failure: @escaping FailureResponse){
         let header = authorizationHeader(withToken: token)
         self.GET(withEndpoint: PlacesEndpoints.placesByGPS.rawValue.replacingOccurrences(of: "<lt>", with: lat).replacingOccurrences(of: "<lng>", with: long), params: nil, headers: header, success: success, failure: failure)
+    }
+    
+    func getPlacesByGPS(token:String,lat:String,long:String,endpoint:String,success:@escaping SuccessResponse, failure: @escaping FailureResponse){
+        let header = authorizationHeader(withToken: token)
+        self.GETPagination(withEndpoint: endpoint, params: nil, headers: header, success: success, failure: failure)
+    }
+    
+    func getDiscountList(token:String,endpoint:String,success: @escaping SuccessResponse,failure: @escaping FailureResponse){
+        let header = authorizationHeader(withToken: token)
+        self.GETPagination(withEndpoint: endpoint, params: nil, headers: header, success: success, failure: failure)
     }
     
     func getDiscountList(token:String,success: @escaping SuccessResponse,failure: @escaping FailureResponse){

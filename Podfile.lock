@@ -76,6 +76,7 @@ PODS:
   - SVProgressHUD (2.2.5)
   - SwiftMessages (4.1.2)
   - SwiftyJSON (4.0.0)
+  - UIScrollView-InfiniteScroll (1.1.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -90,6 +91,7 @@ DEPENDENCIES:
   - SVProgressHUD
   - SwiftMessages
   - SwiftyJSON
+  - UIScrollView-InfiniteScroll (~> 1.1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -116,6 +118,7 @@ SPEC REPOS:
     - SVProgressHUD
     - SwiftMessages
     - SwiftyJSON
+    - UIScrollView-InfiniteScroll
 
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
@@ -141,7 +144,8 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftMessages: d81f48c1f8b6bc1dbebdfffe11226f0344f937ca
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  UIScrollView-InfiniteScroll: 3ef456bcbe759c19f510a383cff96e6647c98c98
 
-PODFILE CHECKSUM: 7ee6134572c7b07c925975f3e4831ea7de078cef
+PODFILE CHECKSUM: 1f549812f85590ccc33621c2c78e683abfde1933
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.3

@@ -19,7 +19,7 @@ class PlaceDetailViewController : UIViewController {
     @IBOutlet weak var pagerImage : ViewPager!
     @IBOutlet weak var dataTableView : UITableView!
     @IBOutlet weak var likeBarButtonItem: UIBarButtonItem!
-    var state = PlaceDetailButtonSelected.data
+    var state = PlaceDetailButtonSelected.promotion
     var placeId : String!
     var user : UserEntity!
     let kshowCarPopUpIdentifier : String = "showCarPopUpIdentifier"
@@ -55,12 +55,17 @@ class PlaceDetailViewController : UIViewController {
     }
     
     @IBAction func callPlaceButtonDidSelect(_ sender: UIButton){
-        if let url = URL(string: "tel://\(self.placeDetail.mobile)"), UIApplication.shared.canOpenURL(url) {
+        let mobile : String = self.placeDetail.mobile.replacingOccurrences(of: " ", with: "")
+        print(mobile)
+        if let url = URL(string: "tel://\(mobile)"), UIApplication.shared.canOpenURL(url) {
             if #available(iOS 10, *) {
                 UIApplication.shared.open(url)
             } else {
                 UIApplication.shared.openURL(url)
             }
+        }
+        else {
+            
         }
     }
     
@@ -187,7 +192,7 @@ extension PlaceDetailViewController : UITableViewDelegate,UITableViewDataSource 
             return 360
         }
         else{
-            return 80
+            return 60
         }
     }
 }

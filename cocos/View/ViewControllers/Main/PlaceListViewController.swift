@@ -30,6 +30,19 @@ class PlaceListViewController : UIViewController {
         self.getFakeLocation()
     }
     
+    fileprivate func setupTableView(){
+        listTableView.addInfiniteScroll { (tableView) -> Void in
+            // update table view
+            self.nextPage()
+            // finish infinite scroll animation
+            tableView.finishInfiniteScroll()
+        }
+    }
+    
+    fileprivate func nextPage(){
+        
+    }
+    
     func getFakeLocation(){
         self.lat = -12.072369
         self.long = -77.068706

@@ -51,6 +51,8 @@
 		4998870B204DCB2000C59A64 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4998870A204DCB2000C59A64 /* ForgotPasswordViewController.swift */; };
 		499E63382027E87900B88867 /* ViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E63372027E87900B88867 /* ViewPager.swift */; };
 		499E633C2027F2E800B88867 /* RoundedBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E633B2027F2E800B88867 /* RoundedBorderButton.swift */; };
+		49C15CD7210D7124008CCE60 /* LoadListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C15CD5210D7124008CCE60 /* LoadListTableViewCell.swift */; };
+		49C15CD8210D7124008CCE60 /* LoadListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C15CD6210D7124008CCE60 /* LoadListTableViewCell.xib */; };
 		49C68895201FE94000F1E1B3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 49C68894201FE94000F1E1B3 /* Podfile */; };
 		49C688A4201FFB0000F1E1B3 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C688A3201FFB0000F1E1B3 /* Intro.storyboard */; };
 		49C6B9BC201FE83500F390D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C6B9BB201FE83500F390D4 /* AppDelegate.swift */; };
@@ -144,6 +146,8 @@
 		4998870A204DCB2000C59A64 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		499E63372027E87900B88867 /* ViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPager.swift; sourceTree = "<group>"; };
 		499E633B2027F2E800B88867 /* RoundedBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderButton.swift; sourceTree = "<group>"; };
+		49C15CD5210D7124008CCE60 /* LoadListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadListTableViewCell.swift; sourceTree = "<group>"; };
+		49C15CD6210D7124008CCE60 /* LoadListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadListTableViewCell.xib; sourceTree = "<group>"; };
 		49C68894201FE94000F1E1B3 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		49C688A3201FFB0000F1E1B3 /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 		49C6B9B8201FE83500F390D4 /* cocos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cocos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -364,6 +368,8 @@
 				495747B2208CF76100E84631 /* SearchPlaceListCell.swift */,
 				49844ED020A0D9AE00C43FAD /* PromotionPlaceCell.swift */,
 				49844ED220A0D9E000C43FAD /* DescriptionPlaceCell.swift */,
+				49C15CD5210D7124008CCE60 /* LoadListTableViewCell.swift */,
+				49C15CD6210D7124008CCE60 /* LoadListTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -625,6 +631,7 @@
 				495364CC20B77A98008BD859 /* GoogleService-Info.plist in Resources */,
 				49D3AD0D2028F3270079D154 /* SuccessMessageView.xib in Resources */,
 				49C68895201FE94000F1E1B3 /* Podfile in Resources */,
+				49C15CD8210D7124008CCE60 /* LoadListTableViewCell.xib in Resources */,
 				49C6B9C1201FE83500F390D4 /* Main.storyboard in Resources */,
 				49C688A4201FFB0000F1E1B3 /* Intro.storyboard in Resources */,
 				49D3AD0F202A4B900079D154 /* IntroCustomView.xib in Resources */,
@@ -692,6 +699,7 @@
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UIScrollView-InfiniteScroll/UIScrollView_InfiniteScroll.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -713,6 +721,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIScrollView_InfiniteScroll.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -801,6 +810,7 @@
 				49844ED520A0DCE400C43FAD /* PlaceDetailViewController.swift in Sources */,
 				49FAEEF6203DECFE000E444A /* AuthorizationService.swift in Sources */,
 				495747B7208CF9D400E84631 /* SearchPlaceController.swift in Sources */,
+				49C15CD7210D7124008CCE60 /* LoadListTableViewCell.swift in Sources */,
 				498F6EE12051E21C00382241 /* PlacesEntity.swift in Sources */,
 				490FA755206184E900B474E4 /* UIImageView+DownloadImage.swift in Sources */,
 			);
@@ -970,11 +980,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V9N8TADQGM;
+				DEVELOPMENT_TEAM = NC98GP82N7;
 				INFOPLIST_FILE = "cocos/App Delegate/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bruild.cocosapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rsquared.cocosapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -987,11 +997,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V9N8TADQGM;
+				DEVELOPMENT_TEAM = NC98GP82N7;
 				INFOPLIST_FILE = "cocos/App Delegate/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bruild.cocosapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rsquared.cocosapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

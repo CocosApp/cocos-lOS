@@ -55,22 +55,41 @@ class BaseService : NSObject {
         self.request(toURL: self.baseUrl + endpoint, withMethod: .post, params: params, headers: headers, success: success, failure: failure)
     }
     
+    func POSTPagination(withEndpoint endpoint: String, params: [String:String]?, headers: [String:String]?, success: @escaping SuccessResponse, failure: @escaping FailureResponse) -> Void {
+        self.request(toURL: endpoint, withMethod: .post, params: params, headers: headers, success: success, failure: failure)
+    }
+    
     func GET(withEndpoint endpoint: String, params: [String:String]?, headers: [String:String]?, success: @escaping SuccessResponse, failure: @escaping FailureResponse) -> Void {
         self.request(toURL: self.baseUrl + endpoint, withMethod: .get, params: params, headers: headers, success: success, failure: failure)
+    }
+    
+    func GETPagination(withEndpoint endpoint: String, params: [String:String]?, headers: [String:String]?, success: @escaping SuccessResponse, failure: @escaping FailureResponse) -> Void {
+        self.request(toURL: endpoint, withMethod: .get, params: params, headers: headers, success: success, failure: failure)
     }
     
     func PUT(withEndpoint endpoint: String, params: [String:String]?, headers: [String:String]?, success: @escaping SuccessResponse, failure: @escaping FailureResponse) -> Void {
         self.request(toURL: self.baseUrl + endpoint, withMethod: .put, params: params, headers: headers, success: success, failure: failure)
     }
     
+    func PUTPagination(withEndpoint endpoint: String, params: [String:String]?, headers: [String:String]?, success: @escaping SuccessResponse, failure: @escaping FailureResponse) -> Void {
+        self.request(toURL: endpoint, withMethod: .put, params: params, headers: headers, success: success, failure: failure)
+    }
+    
     func PATCH(withEndpoint endpoint: String, params:[String:String]?, headers: [String:String]?, success: @escaping SuccessResponse, failure: @escaping FailureResponse) -> Void {
         self.request(toURL: self.baseUrl + endpoint, withMethod: .patch, params : params, headers: headers, success: success, failure: failure)
+    }
+    
+    func PATCHPagination(withEndpoint endpoint: String, params:[String:String]?, headers: [String:String]?, success: @escaping SuccessResponse, failure: @escaping FailureResponse) -> Void {
+        self.request(toURL: endpoint, withMethod: .patch, params : params, headers: headers, success: success, failure: failure)
     }
     
     func DELETE(withEndpoint endpoint: String, params:[String:String]?, headers: [String: String]?, success: @escaping SuccessResponse, failure: @escaping FailureResponse) -> Void {
         self.request(toURL: self.baseUrl + endpoint, withMethod: .delete, params: params, headers: headers, success: success, failure: failure)
     }
     
+    func DELETEPagination(withEndpoint endpoint: String, params:[String:String]?, headers: [String: String]?, success: @escaping SuccessResponse, failure: @escaping FailureResponse) -> Void {
+        self.request(toURL: endpoint, withMethod: .delete, params: params, headers: headers, success: success, failure: failure)
+    }
     
     func request(toURL url: String, withMethod method: HTTPMethod, params: [String: String]?, headers: [String: String]?, success: @escaping
         SuccessResponse, failure: @escaping FailureResponse) -> Void {

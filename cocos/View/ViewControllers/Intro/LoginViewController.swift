@@ -120,7 +120,13 @@ class LoginViewController : BaseUIViewController , GIDSignInDelegate, GIDSignInU
     //pragma Mark - delegates
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if error == nil {
-            
+            let controller = LoginController.controller
+            controller.loginGmail(user.authentication.accessToken, success: { (user) in
+                self.hideActivityIndicator()
+                self.presentMainViewController()
+            }) { (error) in
+                self.requestDidFinishWithError(error)
+            }
         }
         else{
             GIDSignIn.sharedInstance().signOut()
