@@ -74,13 +74,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Controller/PlacesController.swift"
-            timestampString = "554622313.39616"
+            timestampString = "555362245.553273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
             endingLineNumber = "25"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getPlaceList(_:success:failure:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -202,13 +202,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Controller/PlacesController.swift"
-            timestampString = "554622313.39639"
+            timestampString = "555362245.5536439"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
             endingLineNumber = "24"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getPlaceList(_:success:failure:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -362,13 +362,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Controller/PlacesController.swift"
-            timestampString = "554622313.396692"
+            timestampString = "555362245.554013"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
             endingLineNumber = "92"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getDiscounts(_:success:failure:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -378,7 +378,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/FavoriteViewController.swift"
-            timestampString = "550006556.686317"
+            timestampString = "555353622.047394"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -426,7 +426,7 @@
                   moduleName = "cocos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/FavoriteController.swift"
-                  timestampString = "554704592.105667"
+                  timestampString = "555362004.324012"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -441,7 +441,7 @@
                   moduleName = "cocos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/FavoriteController.swift"
-                  timestampString = "554704592.108153"
+                  timestampString = "555362004.326479"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -1002,7 +1002,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlacesViewController.swift"
-            timestampString = "554622313.397519"
+            timestampString = "555374805.149303"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "159"
@@ -1018,7 +1018,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlacesViewController.swift"
-            timestampString = "554622313.397607"
+            timestampString = "555374805.149485"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "161"
@@ -1034,7 +1034,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/View/ViewControllers/Main/PlacesViewController.swift"
-            timestampString = "554622313.39768"
+            timestampString = "555374805.149543"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "160"
@@ -1050,13 +1050,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Controller/PlacesController.swift"
-            timestampString = "554622313.3977441"
+            timestampString = "555362245.555727"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
             endingLineNumber = "31"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getNextSubcategoryList(_:success:failure:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1066,7 +1066,7 @@
                   moduleName = "cocos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/PlacesController.swift"
-                  timestampString = "554704592.156179"
+                  timestampString = "555362004.375109"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
@@ -1081,7 +1081,7 @@
                   moduleName = "cocos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/PlacesController.swift"
-                  timestampString = "554704592.158796"
+                  timestampString = "555362004.377581"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
@@ -1098,13 +1098,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Controller/PlacesController.swift"
-            timestampString = "554622313.397817"
+            timestampString = "555362245.555885"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
             endingLineNumber = "32"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getNextSubcategoryList(_:success:failure:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1114,7 +1114,7 @@
                   moduleName = "cocos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/PlacesController.swift"
-                  timestampString = "554704592.165098"
+                  timestampString = "555362004.384158"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
@@ -1129,7 +1129,7 @@
                   moduleName = "cocos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/PlacesController.swift"
-                  timestampString = "554704592.167634"
+                  timestampString = "555362004.386634"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -1146,13 +1146,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Controller/PlacesController.swift"
-            timestampString = "554622313.3979"
+            timestampString = "555362245.555989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getNextSubcategoryList(_:success:failure:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1194,13 +1194,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Controller/PlacesController.swift"
-            timestampString = "554622313.398146"
+            timestampString = "555362245.5562021"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
             endingLineNumber = "34"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getNextSubcategoryList(_:success:failure:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1210,13 +1210,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Controller/PlacesController.swift"
-            timestampString = "554622313.398211"
+            timestampString = "555362245.556338"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getDiscounts(_:success:failure:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1226,7 +1226,7 @@
                   moduleName = "cocos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/PlacesController.swift"
-                  timestampString = "554704592.184458"
+                  timestampString = "555362004.403402"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "91"
@@ -1241,7 +1241,7 @@
                   moduleName = "cocos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/PlacesController.swift"
-                  timestampString = "554704592.18697"
+                  timestampString = "555362004.405866"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "92"
@@ -1258,13 +1258,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cocos/Controller/PlacesController.swift"
-            timestampString = "554622313.3983001"
+            timestampString = "555362245.556444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
             endingLineNumber = "93"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getDiscounts(_:success:failure:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1328,6 +1328,214 @@
             startingLineNumber = "53"
             endingLineNumber = "53"
             landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/View/ViewControllers/Main/New/BenefitsViewController.swift"
+            timestampString = "555374805.149886"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "startService()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cocos.BenefitsViewController.(startService in _2DF06352D75150547B27B63568525A84)() -&gt; ()"
+                  moduleName = "cocos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/View/ViewControllers/Main/New/BenefitsViewController.swift"
+                  timestampString = "555362004.438144"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;cocos.CardEntity&gt;) -&gt; () in cocos.BenefitsViewController.(startService in _2DF06352D75150547B27B63568525A84)() -&gt; ()"
+                  moduleName = "cocos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/View/ViewControllers/Main/New/BenefitsViewController.swift"
+                  timestampString = "555362004.440975"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/Controller/PlacesController.swift"
+            timestampString = "555362245.557677"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "getNextDiscounts(_:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/Controller/PlacesController.swift"
+            timestampString = "555362245.557793"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "getNextDiscounts(_:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/Controller/PlacesController.swift"
+            timestampString = "555362245.5579441"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "getNextDiscounts(_:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cocos.PlacesController.getNextDiscounts(Swift.String, success: (Swift.Array&lt;cocos.CardEntity&gt;) -&gt; (), failure: (__ObjC.NSError) -&gt; ()) -&gt; ()"
+                  moduleName = "cocos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/PlacesController.swift"
+                  timestampString = "555362004.458467"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "896">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; () in cocos.PlacesController.getNextDiscounts(Swift.String, success: (Swift.Array&lt;cocos.CardEntity&gt;) -&gt; (), failure: (__ObjC.NSError) -&gt; ()) -&gt; ()"
+                  moduleName = "cocos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/PlacesController.swift"
+                  timestampString = "555362004.460941"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/Controller/PlacesController.swift"
+            timestampString = "555362245.558044"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "getNextDiscounts(_:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cocos.PlacesController.getNextDiscounts(Swift.String, success: (Swift.Array&lt;cocos.CardEntity&gt;) -&gt; (), failure: (__ObjC.NSError) -&gt; ()) -&gt; ()"
+                  moduleName = "cocos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/PlacesController.swift"
+                  timestampString = "555362004.46806"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "700">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cocos.PlacesController.getNextDiscounts(Swift.String, success: (Swift.Array&lt;cocos.CardEntity&gt;) -&gt; (), failure: (__ObjC.NSError) -&gt; ()) -&gt; ()"
+                  moduleName = "cocos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Desktop/Documents/iosProjects/cocos/cocos/Controller/PlacesController.swift"
+                  timestampString = "555362004.47065"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "1576">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/Controller/PlacesController.swift"
+            timestampString = "555362245.558141"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "getNextDiscounts(_:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cocos/Controller/PlacesController.swift"
+            timestampString = "555362245.563642"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "getNextDiscounts(_:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

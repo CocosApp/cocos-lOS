@@ -34,10 +34,6 @@ class PlacesController : NSObject {
                 success((self.responseSubcategory?.results)!)
             }, failure: failure)
         }
-        else {
-            let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Object does not exist"])
-            failure(error)
-        }
     }
     
     func getSubcategoryList(_ token: String,success: @escaping (_ subcategory:[SubcategoryEntity])->Void,failure: @escaping (_ error: NSError)->Void){
@@ -57,10 +53,6 @@ class PlacesController : NSObject {
                 success((self.responseNearMe?.results)!)
             }, failure: failure)
         }
-        else {
-            let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Object does not exist"])
-            failure(error)
-        }
     }
     
     func getPlaceByPosition(_ token:String,lat:Double,long:Double, success: @escaping (_ places: [PlacesEntity])->Void,failure: @escaping (_ error : NSError)->Void){
@@ -79,10 +71,6 @@ class PlacesController : NSObject {
                 self.responseDiscounts = ResponseEntityCards.getResponseFromJSON(fromJSON: response)
                 success((self.responseDiscounts?.results)!)
             }, failure: failure)
-        }
-        else {
-            let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Object does not exist"])
-            failure(error)
         }
     }
     
