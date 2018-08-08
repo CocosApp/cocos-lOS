@@ -20,10 +20,12 @@ class CategoryViewController: BaseUIViewController {
     }
     let controller = PlacesController.controller
     let user : UserEntity = UserEntity.retriveArchiveUser()!
-    
+    let kshowPlaceListSegue : String = "showPlaceListSegue"
+    var subcategorySelected : SubcategoryEntity!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupTableView()
         // Do any additional setup after loading the view.
     }
     
@@ -57,6 +59,14 @@ class CategoryViewController: BaseUIViewController {
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == kshowPlaceListSegue {
+            if let vc = segue.destination as? PlaceListViewController{
+                vc.subcategoryId = self.subcategorySelected.id
+                vc.subcategoryName = self.subcategorySelected.name
+            }
+        }
+    }
 }
 
 extension CategoryViewController : UITableViewDelegate,UITableViewDataSource {
@@ -71,5 +81,10 @@ extension CategoryViewController : UITableViewDelegate,UITableViewDataSource {
             cell.imageCategory?.af_setImage(withURL: URL(string: placesList[indexPath.row].image)!)
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.subcategorySelected = self.placesList[indexPath.row]
+        performSegue(withIdentifier: kshowPlaceListSegue, sender: self)
     }
 }

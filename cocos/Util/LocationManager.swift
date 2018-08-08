@@ -87,8 +87,7 @@ class LocationManager : NSObject,CLLocationManagerDelegate {
         
         if let ubication = locations.first
         {
-            //            self.locationManager.stopUpdatingLocation()
-            
+            self.locationManager.stopUpdatingLocation()
             self.delegate?.getLocation(coord: ubication.coordinate)
             //            self.delegado = nil
         }

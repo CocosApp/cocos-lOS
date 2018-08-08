@@ -19,11 +19,14 @@ class NearMeViewController: BaseUIViewController {
     }
     var lat : Double!
     var long : Double!
+    var placeSelected : PlacesEntity!
     let controller = PlacesController.controller
     let user : UserEntity = UserEntity.retriveArchiveUser()!
+    let kplaceDetailIdentifier : String = "placeDetailIdentifier"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupTableView()
         LocationManager.sharedInstance.delegate = self
         LocationManager.sharedInstance.startLocationUpdate()
         // Do any additional setup after loading the view.
@@ -75,6 +78,14 @@ class NearMeViewController: BaseUIViewController {
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == kplaceDetailIdentifier {
+            if let vc = segue.destination as? PlaceDetailViewController{
+                vc.placeId = String(placeSelected.id)
+            }
+        }
+    }
+    
 }
 
 extension NearMeViewController : UITableViewDelegate,UITableViewDataSource{
@@ -89,6 +100,11 @@ extension NearMeViewController : UITableViewDelegate,UITableViewDataSource{
             cell.imagePlace?.af_setImage(withURL: URL(string: placesNearMe[indexPath.row].photo)!)
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.placeSelected = self.placesNearMe[indexPath.row]
+        performSegue(withIdentifier: kplaceDetailIdentifier, sender: self)
     }
 }
 

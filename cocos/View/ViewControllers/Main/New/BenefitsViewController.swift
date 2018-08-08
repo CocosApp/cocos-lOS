@@ -19,10 +19,12 @@ class BenefitsViewController: BaseUIViewController {
     
     let controller = PlacesController.controller
     let user : UserEntity = UserEntity.retriveArchiveUser()!
+    let kcardPlacesIdentifier : String = "cardPlacesIdentifier"
+    var discountSelect : CardEntity!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.setupTableView()
         // Do any additional setup after loading the view.
     }
     
@@ -56,6 +58,15 @@ class BenefitsViewController: BaseUIViewController {
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == kcardPlacesIdentifier {
+            if let vc = segue.destination as? PlacesByCardViewController {
+                vc.cardId = String(self.discountSelect.id)
+                vc.cardName = self.discountSelect.name
+            }
+        }
+    }
+    
 }
 
 extension BenefitsViewController : UITableViewDelegate,UITableViewDataSource {
@@ -70,5 +81,10 @@ extension BenefitsViewController : UITableViewDelegate,UITableViewDataSource {
             cell.backgroundDiscount.af_setImage(withURL: URL(string: discountList[indexPath.row].photo)!)
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.discountSelect = self.discountList[indexPath.row]
+        performSegue(withIdentifier: kcardPlacesIdentifier, sender: self)
     }
 }
