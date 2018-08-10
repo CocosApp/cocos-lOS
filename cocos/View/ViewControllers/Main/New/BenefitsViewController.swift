@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UIScrollView_InfiniteScroll
 
 class BenefitsViewController: BaseUIViewController {
     @IBOutlet weak var tableView: UITableView!

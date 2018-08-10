@@ -100,17 +100,31 @@ class PlaceDetailViewController : UIViewController {
         if let imageurl = imageUrl{
             //let urlRequest = URLRequest(url: URL(string: imageurl)!)
             DataRequest.addAcceptableImageContentTypes(["image/jpg"])
+            self.showActivityIndicator()
             Alamofire.request(imageurl, method: .get).responseImage { response in
+                self.hideActivityIndicator()
                 if let data = response.result.value {
                     let text = "Todos los descuentos en un solo sito"
-                    let myWebsite : NSURL = NSURL(string:"https://appcocos.com")!
+                    let myWebsite : NSURL!
+                    if self.placeDetail.facebook != ""{
+                        myWebsite = NSURL(string:self.placeDetail.facebook)!
+                    }
+                    else {
+                        myWebsite = NSURL(string:"https://appcocos.com")!
+                    }
                     let shareAll = [text,data,myWebsite] as [Any]
                     let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
                     activityViewController.popoverPresentationController?.sourceView = self.view
                     self.present(activityViewController, animated: true, completion: nil)
                 } else {
                     let text = "Todos los descuentos en un solo sito"
-                    let myWebsite : NSURL = NSURL(string:"https://appcocos.com")!
+                    let myWebsite : NSURL!
+                    if self.placeDetail.facebook != ""{
+                        myWebsite = NSURL(string:self.placeDetail.facebook)!
+                    }
+                    else {
+                        myWebsite = NSURL(string:"https://appcocos.com")!
+                    }
                     let shareAll = [text, myWebsite] as [Any]
                     let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
                     activityViewController.popoverPresentationController?.sourceView = self.view
@@ -120,7 +134,13 @@ class PlaceDetailViewController : UIViewController {
         }
         else{
             let text = "Todos los descuentos en un solo sito"
-            let myWebsite : NSURL = NSURL(string:"https://appcocos.com")!
+            let myWebsite : NSURL!
+            if self.placeDetail.facebook != ""{
+                myWebsite = NSURL(string:self.placeDetail.facebook)!
+            }
+            else {
+                myWebsite = NSURL(string:"https://appcocos.com")!
+            }
             let shareAll = [text, myWebsite] as [Any]
             let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
             activityViewController.popoverPresentationController?.sourceView = self.view
@@ -145,6 +165,8 @@ class PlaceDetailViewController : UIViewController {
             }
         }
     }
+    
+    
 }
 extension PlaceDetailViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -160,6 +182,7 @@ extension PlaceDetailViewController : UITableViewDelegate,UITableViewDataSource 
         if state == .data{
             let cell = tableView.dequeueReusableCell(withIdentifier: descriptionCellIdentifier, for: indexPath) as! DescriptionPlaceCell
             cell.placeDetail = placeDetail
+            cell.placeDetailDelegate = self
             return cell
         }
         else{
@@ -172,7 +195,7 @@ extension PlaceDetailViewController : UITableViewDelegate,UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if state == .promotion {
             self.promotionSelected = self.placeDetail.discount[indexPath.row]
-            if self.promotionSelected.porc != nil {
+            if self.promotionSelected.price != 0 {
                 self.performSegue(withIdentifier: "showDiscountDescriptionIdentifier", sender: self)
             }
             else{

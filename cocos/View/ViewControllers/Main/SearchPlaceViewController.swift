@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UIScrollView_InfiniteScroll
 
 class SearchPlaceViewController : UIViewController {
     @IBOutlet weak var searchPlaceTableView: UITableView!
@@ -20,7 +21,26 @@ class SearchPlaceViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupTableView()
         self.setupList()
+    }
+    
+    fileprivate func setupTableView(){
+        searchPlaceTableView.addInfiniteScroll { (tableView) -> Void in
+            // update table view
+            //self.nextPage()
+            // finish infinite scroll animation
+            tableView.finishInfiniteScroll()
+        }
+    }
+    
+    fileprivate func nextPage(){
+        let controller = SearchPlaceController.controller
+        controller.searchNextPlace(success: { (places) in
+            self.list.append(contentsOf: places)
+        }) { (error) in
+            self.showErrorMessage(withTitle: error.localizedDescription)
+        }
     }
     
     func setupList(){

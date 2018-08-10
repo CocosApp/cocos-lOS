@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import UIScrollView_InfiniteScroll
 
 class NearMeViewController: BaseUIViewController {
     @IBOutlet weak var tableView: UITableView!

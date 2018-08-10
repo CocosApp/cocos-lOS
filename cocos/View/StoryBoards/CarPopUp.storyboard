@@ -21,8 +21,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7JD-1m-8s8">
                                 <rect key="frame" x="16" y="208.5" width="343" height="250"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona con qué te gustaría ir.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqa-Ec-dBg">
-                                        <rect key="frame" x="16" y="16" width="231" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqa-Ec-dBg">
+                                        <rect key="frame" x="16" y="16" width="311" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -117,6 +117,7 @@
                                     <constraint firstAttribute="trailing" secondItem="gkb-pF-eyt" secondAttribute="trailing" constant="16" id="7fP-gV-Hv6"/>
                                     <constraint firstItem="gkb-pF-eyt" firstAttribute="top" secondItem="YYg-uk-Fdh" secondAttribute="bottom" constant="16" id="G5p-fB-d4j"/>
                                     <constraint firstAttribute="trailing" secondItem="t0Z-vK-8f0" secondAttribute="trailing" constant="16" id="Oc5-bB-aXM"/>
+                                    <constraint firstAttribute="trailing" secondItem="xqa-Ec-dBg" secondAttribute="trailing" constant="16" id="OvC-av-0OI"/>
                                     <constraint firstItem="YYg-uk-Fdh" firstAttribute="leading" secondItem="7JD-1m-8s8" secondAttribute="leading" constant="16" id="SDe-4f-HRt"/>
                                     <constraint firstItem="xqa-Ec-dBg" firstAttribute="top" secondItem="7JD-1m-8s8" secondAttribute="top" constant="16" id="WMN-Be-oUA"/>
                                     <constraint firstItem="YYg-uk-Fdh" firstAttribute="top" secondItem="xqa-Ec-dBg" secondAttribute="bottom" constant="30" id="ZWJ-oN-MLl"/>

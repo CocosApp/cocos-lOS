@@ -80,7 +80,17 @@ class DescriptionPlaceCell : UITableViewCell{
     }
     
     @IBAction func downloadMenuPDFButtonDidSelect(_ sender: Any) {
-        
+        if placeDetail.food_letter != "" {
+            var docURL = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)).last as NSURL?
+            docURL = docURL?.appendingPathComponent("\(placeDetail.food_letter).pdf") as NSURL?
+            let url = URL.init(string: placeDetail.food_letter)
+            Downloader.load(url: url!, to: docURL! as URL) {
+                self.placeDetailDelegate.withError(error: "Descarga exitosa")
+            }
+        }
+        else {
+            self.placeDetailDelegate.withError(error: "No hay carta disponible")
+        }
     }
     
 }

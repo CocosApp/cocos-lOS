@@ -13,7 +13,7 @@ enum PlacesEndpoints: String {
     case placesList = "restaurant/list/"
     case placesByGPS = "restaurantGPS/list/?lat=<lt>&long=<lng>&rad=5"
     case cardList = "card/list/"
-    case placesBySubcategory = "restaurantBySubcategory/<pk>/list/?lat=<lt>&long=<lng>&rad=5"
+    case placesBySubcategory = "restaurantBySubcategory/<pk>/list/"
     case placesByCard = "card/<pk>/discount/restaurant"
 }
 
@@ -27,15 +27,9 @@ class PlacesService : BaseService {
         self.GET(withEndpoint: PlacesEndpoints.placesList.rawValue, params: nil, headers: header, success: success, failure: failure)
     }
     
-    func getPlaceList(token: String, page : String,success: @escaping SuccessResponse, failure: @escaping FailureResponse){
-        let header = authorizationHeader(withToken: token)
-        let paging: String = "/page=\(page)"
-        self.GET(withEndpoint: "\(PlacesEndpoints.placesList.rawValue)\(paging)", params: nil, headers: header, success: success, failure: failure)
-    }
-    
     func getPlaceList(token: String,endpoint:String,success: @escaping SuccessResponse, failure: @escaping FailureResponse){
         let header = authorizationHeader(withToken: token)
-        self.GETPagination(withEndpoint: endpoint, params: nil, headers: header, success: success, failure: failure)
+        self.GETPagination(withEndpoint: endpoint.replacingOccurrences(of: "http", with: "https"), params: nil, headers: header, success: success, failure: failure)
     }
     
     func getSubcategoryList(token: String,success: @escaping SuccessResponse, failure: @escaping FailureResponse){
@@ -45,7 +39,7 @@ class PlacesService : BaseService {
     
     func getSubcategoryList(token: String,endpoint:String ,success: @escaping SuccessResponse, failure: @escaping FailureResponse){
         let header = authorizationHeader(withToken: token)
-        self.GETPagination(withEndpoint: endpoint, params: nil, headers: header, success: success, failure: failure)
+        self.GETPagination(withEndpoint: endpoint.replacingOccurrences(of: "http", with: "https"), params: nil, headers: header, success: success, failure: failure)
     }
     
     func getPlacesByGPS(token:String,lat:String,long:String,success:@escaping SuccessResponse, failure: @escaping FailureResponse){
@@ -55,12 +49,12 @@ class PlacesService : BaseService {
     
     func getPlacesByGPS(token:String,lat:String,long:String,endpoint:String,success:@escaping SuccessResponse, failure: @escaping FailureResponse){
         let header = authorizationHeader(withToken: token)
-        self.GETPagination(withEndpoint: endpoint, params: nil, headers: header, success: success, failure: failure)
+        self.GETPagination(withEndpoint: endpoint.replacingOccurrences(of: "http", with: "https"), params: nil, headers: header, success: success, failure: failure)
     }
     
     func getDiscountList(token:String,endpoint:String,success: @escaping SuccessResponse,failure: @escaping FailureResponse){
         let header = authorizationHeader(withToken: token)
-        self.GETPagination(withEndpoint: endpoint, params: nil, headers: header, success: success, failure: failure)
+        self.GETPagination(withEndpoint: endpoint.replacingOccurrences(of: "http", with: "https"), params: nil, headers: header, success: success, failure: failure)
     }
     
     func getDiscountList(token:String,success: @escaping SuccessResponse,failure: @escaping FailureResponse){
@@ -68,9 +62,14 @@ class PlacesService : BaseService {
         self.GET(withEndpoint: PlacesEndpoints.cardList.rawValue, params: nil, headers: header, success: success, failure: failure)
     }
     
-    func getPlacesBySubcategory(token:String,subcategoryId:String,latitude:String,longitude:String,success: @escaping SuccessResponse, failure: @escaping FailureResponse){
+    func getPlacesBySubcategory(token:String,subcategoryId:String,success: @escaping SuccessResponse, failure: @escaping FailureResponse){
         let header = authorizationHeader(withToken: token)
-        self.GET(withEndpoint: PlacesEndpoints.placesBySubcategory.rawValue.replacingOccurrences(of: "<pk>", with: subcategoryId).replacingOccurrences(of: "<lt>", with: latitude).replacingOccurrences(of: "<lng>", with: longitude), params: nil, headers: header, success: success, failure: failure)
+        self.GET(withEndpoint: PlacesEndpoints.placesBySubcategory.rawValue.replacingOccurrences(of: "<pk>", with: subcategoryId), params: nil, headers: header, success: success, failure: failure)
+    }
+    
+    func getPlacesBySubcategory(token:String,endpoint:String,success: @escaping SuccessResponse,failure: @escaping FailureResponse){
+        let header = authorizationHeader(withToken: token)
+        self.GETPagination(withEndpoint: endpoint.replacingOccurrences(of: "http", with: "https"), params: nil, headers: header, success: success, failure: failure)
     }
     
     func getPlacesByCard(token:String,cardId:String,success: @escaping SuccessResponse,failure: @escaping FailureResponse){

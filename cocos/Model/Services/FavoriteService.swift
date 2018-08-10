@@ -21,6 +21,10 @@ class FavoriteService : BaseService {
         self.GET(withEndpoint: FavoriteEndpoint.favoritePlaceList.rawValue, params: nil, headers: header, success: success, failure: failure)
     }
     
+    func getFavoritePlaces(token:String,endpoint:String,success: @escaping SuccessResponse,failure: @escaping FailureResponse){
+        
+    }
+    
     func addFavoritePlace(token:String,idPlace:String,success: @escaping SuccessResponse,failure: @escaping FailureResponse){
         let header = authorizationHeader(withToken: token)
         let params = ["restaurant":idPlace]

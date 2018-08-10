@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UIScrollView_InfiniteScroll
 
 class FavoriteViewController : BaseUIViewController {
     
@@ -24,6 +25,7 @@ class FavoriteViewController : BaseUIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupTableView()
         self.loadData()
     }
     
@@ -34,6 +36,19 @@ class FavoriteViewController : BaseUIViewController {
         }) { (error) in
             self.showErrorMessage(withTitle: error.localizedDescription)
         }
+    }
+    
+    fileprivate func setupTableView(){
+        favoriteTableView.addInfiniteScroll { (tableView) -> Void in
+            // update table view
+            //self.nextPage()
+            // finish infinite scroll animation
+            tableView.finishInfiniteScroll()
+        }
+    }
+    
+    func nextPage(){
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

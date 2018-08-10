@@ -26,7 +26,7 @@ class PromotionPlaceCell : UITableViewCell {
             descriptionAmount = "\(proc)%"
         }
         else if promotion.price != 0{
-            let proc : String = String(promotion.porc)
+            let proc : String = String(promotion.price)
             descriptionAmount = "S/.\(proc)"
         }
         else {

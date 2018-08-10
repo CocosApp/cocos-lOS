@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UIScrollView_InfiniteScroll
 
 class PlacesByCardViewController: UIViewController {
     @IBOutlet weak var placesByCardTableView: UITableView!
@@ -25,7 +26,17 @@ class PlacesByCardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = self.cardName
+        self.setupTableView()
         self.loadData()
+    }
+    
+    fileprivate func setupTableView(){
+        placesByCardTableView.addInfiniteScroll { (tableView) -> Void in
+            // update table view
+            //self.nextPage()
+            // finish infinite scroll animation
+            tableView.finishInfiniteScroll()
+        }
     }
     
     func loadData(){

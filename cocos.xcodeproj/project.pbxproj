@@ -38,6 +38,7 @@
 		49622FCB20805AEF007A6D10 /* PlaceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49622FCA20805AEF007A6D10 /* PlaceListCell.swift */; };
 		49622FCD20805E71007A6D10 /* PlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49622FCC20805E71007A6D10 /* PlaceListViewController.swift */; };
 		49622FCF2080848A007A6D10 /* PlaceListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49622FCE2080848A007A6D10 /* PlaceListController.swift */; };
+		4972C2D5211BBBDD0026EE0B /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972C2D4211BBBDD0026EE0B /* Downloader.swift */; };
 		49778DDB208C33B0002672FC /* FavoriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49778DDA208C33B0002672FC /* FavoriteController.swift */; };
 		497DAE7C20AD2A6A00101135 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497DAE7B20AD2A6A00101135 /* FBSDKCoreKit.framework */; };
 		497DAE7E20AD2A6A00101135 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497DAE7D20AD2A6A00101135 /* FBSDKLoginKit.framework */; };
@@ -141,6 +142,7 @@
 		49622FCA20805AEF007A6D10 /* PlaceListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListCell.swift; sourceTree = "<group>"; };
 		49622FCC20805E71007A6D10 /* PlaceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListViewController.swift; sourceTree = "<group>"; };
 		49622FCE2080848A007A6D10 /* PlaceListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListController.swift; sourceTree = "<group>"; };
+		4972C2D4211BBBDD0026EE0B /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		49778DDA208C33B0002672FC /* FavoriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteController.swift; sourceTree = "<group>"; };
 		497DAE7B20AD2A6A00101135 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		497DAE7D20AD2A6A00101135 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -368,6 +370,7 @@
 				49D3AD032028F1FE0079D154 /* Extensions */,
 				49FAEEF3203DEBAF000E444A /* Utils.swift */,
 				49287CC0211A327400F6D7B6 /* LocationManager.swift */,
+				4972C2D4211BBBDD0026EE0B /* Downloader.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -796,6 +799,7 @@
 				49C7902D20E448D500B57E3E /* ErrorMessageDelegate.swift in Sources */,
 				4921187C20585C7100633ECA /* DiscountPlaceCell.swift in Sources */,
 				495747B1208C852E00E84631 /* FavoritePlaceEntity.swift in Sources */,
+				4972C2D5211BBBDD0026EE0B /* Downloader.swift in Sources */,
 				49C74E652031040A0005EE70 /* UITextfieldWithBorder.swift in Sources */,
 				49FAEEF8203E3994000E444A /* LoginController.swift in Sources */,
 				49844ED920A0E1B900C43FAD /* PlaceDetailService.swift in Sources */,

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import UIScrollView_InfiniteScroll
 
 
 class PlaceListViewController : UIViewController {
@@ -27,7 +27,8 @@ class PlaceListViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = self.subcategoryName
-        self.getFakeLocation()
+        self.setupTableView()
+        self.loadList()
     }
     
     fileprivate func setupTableView(){
@@ -40,22 +41,20 @@ class PlaceListViewController : UIViewController {
     }
     
     fileprivate func nextPage(){
-        
-    }
-    
-    func getFakeLocation(){
-        self.lat = -12.072369
-        self.long = -77.068706
-        self.loadList()
+        let user : UserEntity = UserEntity.retriveArchiveUser()!
+        let controller = PlaceListController.controller
+        controller.loadNextList(user.token, success: { (places) in
+            self.placesList.append(contentsOf: places)
+        }) { (error) in
+            self.showErrorMessage(withTitle: error.localizedDescription)
+        }
     }
     
     private func loadList(){
         let user : UserEntity = UserEntity.retriveArchiveUser()!
         let controller = PlaceListController.controller
         let subcategory : String = String(subcategoryId)
-        let latitude : String = String(lat)
-        let longitude : String = String(long)
-        controller.loadList(user.token, subcategoryId: subcategory,latitude: latitude,longitude: longitude, success: { (places) in
+        controller.loadList(user.token, subcategoryId: subcategory, success: { (places) in
             self.placesList = places
         }) { (error:NSError) in
             self.showErrorMessage(withTitle: error.localizedDescription)
