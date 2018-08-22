@@ -55,9 +55,12 @@ class NearMeViewController: BaseUIViewController {
     }
     
     fileprivate func startService(){
+        self.showActivityIndicator()
         controller.getPlaceByPosition(user.token, lat: self.lat, long: self.long, success: { (places) in
+            self.hideActivityIndicator()
             self.placesNearMe = places
         }) { (error:NSError) in
+            self.hideActivityIndicator()
             self.showErrorMessage(withTitle: error.localizedDescription)
         }
     }
@@ -100,6 +103,7 @@ extension NearMeViewController : UITableViewDelegate,UITableViewDataSource{
         if placesNearMe[indexPath.row].photo != ""{
             cell.imagePlace?.af_setImage(withURL: URL(string: placesNearMe[indexPath.row].photo)!)
         }
+        cell.subcategoryName.text = placesNearMe[indexPath.row].getSubcategoryString()
         return cell
     }
     

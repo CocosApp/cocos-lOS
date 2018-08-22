@@ -35,9 +35,12 @@ class BenefitsViewController: BaseUIViewController {
     }
     
     fileprivate func startService(){
+        self.showActivityIndicator()
         controller.getDiscounts(user.token, success: { (card) in
+            self.hideActivityIndicator()
             self.discountList = card
         }) { (error:NSError) in
+            self.hideActivityIndicator()
             self.showErrorMessage(withTitle: error.localizedDescription)
         }
     }

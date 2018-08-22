@@ -15,6 +15,7 @@ enum PlacesEndpoints: String {
     case cardList = "card/list/"
     case placesBySubcategory = "restaurantBySubcategory/<pk>/list/"
     case placesByCard = "card/<pk>/discount/restaurant"
+    case placesSearch = "restaurant/list/?search=<search>"
 }
 
 class PlacesService : BaseService {
@@ -75,6 +76,16 @@ class PlacesService : BaseService {
     func getPlacesByCard(token:String,cardId:String,success: @escaping SuccessResponse,failure: @escaping FailureResponse){
         let header = authorizationHeader(withToken: token)
         self.GET(withEndpoint: PlacesEndpoints.placesByCard.rawValue.replacingOccurrences(of: "<pk>", with: cardId), params: nil, headers: header, success: success, failure: failure)
+    }
+    
+    func getSearchPlaces(token:String, search:String,success: @escaping SuccessResponse, failure: @escaping FailureResponse){
+        let header = authorizationHeader(withToken: token)
+        self.GET(withEndpoint: PlacesEndpoints.placesSearch.rawValue.replacingOccurrences(of: "<search>", with: search), params: nil, headers: header, success: success, failure: failure)
+    }
+    
+    func getNextSearchPlaces(token:String, endpoint:String,success: @escaping SuccessResponse, failure: @escaping FailureResponse){
+        let header = authorizationHeader(withToken: token)
+        self.GETPagination(withEndpoint: endpoint.replacingOccurrences(of: "http", with: "https"), params: nil, headers: header, success: success, failure: failure)
     }
 
 }

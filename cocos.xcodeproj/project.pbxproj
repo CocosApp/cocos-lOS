@@ -25,6 +25,7 @@
 		49287CBF2119FD2300F6D7B6 /* BenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49287CBE2119FD2300F6D7B6 /* BenefitsViewController.swift */; };
 		49287CC1211A327400F6D7B6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49287CC0211A327400F6D7B6 /* LocationManager.swift */; };
 		49287CC3211A334800F6D7B6 /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49287CC2211A334800F6D7B6 /* LocationDelegate.swift */; };
+		4931490E212649C600C087B6 /* UIColor+COCOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931490D212649C600C087B6 /* UIColor+COCOS.swift */; };
 		4938823720648F3800BA19A2 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938823620648F3700BA19A2 /* FavoriteViewController.swift */; };
 		494499CA2060617800C8AC97 /* ResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494499C92060617800C8AC97 /* ResponseEntity.swift */; };
 		495364CC20B77A98008BD859 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 495364CB20B77A97008BD859 /* GoogleService-Info.plist */; };
@@ -129,6 +130,7 @@
 		49287CBE2119FD2300F6D7B6 /* BenefitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsViewController.swift; sourceTree = "<group>"; };
 		49287CC0211A327400F6D7B6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		49287CC2211A334800F6D7B6 /* LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
+		4931490D212649C600C087B6 /* UIColor+COCOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+COCOS.swift"; sourceTree = "<group>"; };
 		4938823620648F3700BA19A2 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		494499C92060617800C8AC97 /* ResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseEntity.swift; sourceTree = "<group>"; };
 		495364CB20B77A97008BD859 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -517,6 +519,7 @@
 				49D3AD062028F28B0079D154 /* UIViewController+Messages.swift */,
 				49C74E642031040A0005EE70 /* UITextfieldWithBorder.swift */,
 				490FA754206184E900B474E4 /* UIImageView+DownloadImage.swift */,
+				4931490D212649C600C087B6 /* UIColor+COCOS.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -819,6 +822,7 @@
 				49287CB42119F13F00F6D7B6 /* ContainerViewController.swift in Sources */,
 				490EA7E520DC4CBD001EDD48 /* PlacesByCardViewController.swift in Sources */,
 				4998870B204DCB2000C59A64 /* ForgotPasswordViewController.swift in Sources */,
+				4931490E212649C600C087B6 /* UIColor+COCOS.swift in Sources */,
 				498F6EE72051EEA800382241 /* CardEntity.swift in Sources */,
 				494499CA2060617800C8AC97 /* ResponseEntity.swift in Sources */,
 				49622FCD20805E71007A6D10 /* PlaceListViewController.swift in Sources */,

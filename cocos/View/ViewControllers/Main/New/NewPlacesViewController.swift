@@ -25,6 +25,18 @@ class NewPlacesViewController: BaseUIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        // Show the Navigation Bar
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        // Hide the Navigation Bar
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     @IBAction func searchButtonDidSelect(_ sender: Any) {
         performSegue(withIdentifier: "showSearchIdentifier", sender: self)
     }
@@ -55,8 +67,8 @@ class NewPlacesViewController: BaseUIViewController {
             gradient.colors = [
                 UIColor(red:255/255,green:255/255,blue:255/255,alpha:1).cgColor,
                 UIColor(red:255/255,green:255/255,blue:255/255,alpha:1).cgColor,
-                UIColor(red:0/255,green:0/255,blue:0/255,alpha:1).cgColor,
-                UIColor(red:0/255,green:0/255,blue:0/255,alpha:1).cgColor
+                UIColor(red:211/255,green:211/255,blue:211/255,alpha:1).cgColor,
+                UIColor(red:211/255,green:211/255,blue:211/255,alpha:1).cgColor
             ]
             
             /* repeat the central location to have solid colors */

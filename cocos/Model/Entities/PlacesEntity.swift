@@ -12,7 +12,7 @@ class PlacesEntity : NSObject {
     var id : Int = 0
     var name : String = ""
     var photo : String = ""
-    var subcategory : [SubcategoryEntity]!
+    var subcategory : [SubcategoryEntity] = []
     
     class func getPlacesFromJSONArray(fromJSONArray jsonArray: [JSON]?)->[PlacesEntity]? {
         var places : [PlacesEntity] = []
@@ -29,9 +29,20 @@ class PlacesEntity : NSObject {
             place.id = data["id"].intValue
             place.name = data["name"].stringValue
             place.photo = data["photo1"].stringValue
-            place.subcategory = SubcategoryEntity.getSubcategoriesFromJSONArray(fromJSONArray: data["subcategory"].array)
+            place.subcategory = SubcategoryEntity.getSubcategoriesFromJSONArray(fromJSONArray: data["subcategory"].array)!
             return place
         }
         return nil
+    }
+    
+    func getSubcategoryString()->String {
+        var text : String = ""
+        if subcategory.count > 0 {
+            text = subcategory[0].name
+        }
+        else{
+            text = "Sin categoría"
+        }
+        return text
     }
 }

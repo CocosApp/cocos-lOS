@@ -35,9 +35,12 @@ class CategoryViewController: BaseUIViewController {
     }
     
     fileprivate func startService(){
+        self.showActivityIndicator()
         controller.getSubcategoryList(user.token, success: { (places) in
+            self.hideActivityIndicator()
             self.placesList = places
         }, failure: { (error : NSError) in
+            self.hideActivityIndicator()
             self.showErrorMessage(withTitle: error.localizedDescription)
         })
     }

@@ -19,17 +19,40 @@ class PromotionPlaceCell : UITableViewCell {
     }
     
     func setup(){
-        self.titleDiscount.text = promotion.name
         var descriptionAmount : String!
         if promotion.porc != 0 {
+            if promotion.card != nil{
+                let cardName : String = (promotion.card?.name)!
+                self.titleDiscount.text = cardName
+            }
+            else{
+                self.titleDiscount.text = promotion.name
+            }
             let proc : String = String(promotion.porc)
             descriptionAmount = "\(proc)%"
         }
         else if promotion.price != 0{
+            if promotion.card != nil{
+                let cardName : String = (promotion.card?.name)!
+                let descName : String = promotion.name
+                self.titleDiscount.text = "\(cardName) \(descName)"
+            }
+            else{
+                self.titleDiscount.text = promotion.name
+            }
+            self.titleDiscount.text = promotion.name
             let proc : String = String(promotion.price)
             descriptionAmount = "S/.\(proc)"
         }
         else {
+            if promotion.card != nil {
+                let cardName : String = (promotion.card?.name)!
+                let descName : String = promotion.name
+                self.titleDiscount.text = "\(cardName) \(descName)"
+            }else{
+                self.titleDiscount.text = promotion.name
+            }
+            self.titleDiscount.text = promotion.name
             descriptionAmount = promotion.promotion
         }
         self.amountDiscount.text = descriptionAmount

@@ -10,6 +10,8 @@ import UIKit
 import UIScrollView_InfiniteScroll
 
 class SearchPlaceViewController : UIViewController {
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchPlaceTableView: UITableView!
     let kPlaceDetailIdentifier : String = "placeDetailIdentifier"
     var place : PlacesEntity!
@@ -28,7 +30,7 @@ class SearchPlaceViewController : UIViewController {
     fileprivate func setupTableView(){
         searchPlaceTableView.addInfiniteScroll { (tableView) -> Void in
             // update table view
-            //self.nextPage()
+            self.nextPage()
             // finish infinite scroll animation
             tableView.finishInfiniteScroll()
         }
@@ -45,9 +47,12 @@ class SearchPlaceViewController : UIViewController {
     
     func setupList(){
         let controller = SearchPlaceController.controller
+        self.showActivityIndicator()
         controller.searchPlace(success: { (places) in
+            self.hideActivityIndicator()
             self.list = places
         }) { (error) in
+            self.hideActivityIndicator()
             self.showErrorMessage(withTitle: error.localizedDescription)
         }
     }
@@ -83,5 +88,18 @@ extension SearchPlaceViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.place = list[indexPath.row]
         performSegue(withIdentifier: kPlaceDetailIdentifier, sender: self)
+    }
+}
+
+extension SearchPlaceViewController : UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let text = searchBar.text
+        let controller = SearchPlaceController.controller
+        controller.searchPlace(text:text!,success: { (places) in
+            self.list = places
+        }) { (error) in
+            self.showErrorMessage(withTitle: error.localizedDescription)
+        }
     }
 }

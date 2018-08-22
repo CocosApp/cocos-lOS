@@ -24,6 +24,7 @@ class PlaceDetailEntity : NSObject {
     var photo2 : String?
     var photo3 : String?
     var discount : [PromotionEntity] = []
+    var service : [ServicesEntity] = []
     
     
     class func getDetailFromJSON(fromJSON json : JSON?)-> PlaceDetailEntity?{
@@ -46,7 +47,41 @@ class PlaceDetailEntity : NSObject {
         place.photo3 = data["photo3"].stringValue
         place.schedule = ScheduleEntity.getListFromJSON(fromArray: data["schedule"].array)!
         place.discount = PromotionEntity.getListFromJSON(fromArray: data["discount"].array)!
+        place.service = ServicesEntity.getListFromJSON(fromArray: data["service"].array)!
         return place
+    }
+    
+    func getShareText()->String {
+        var text : String = ""
+        if discount.count>0{
+            text = "Conoce los descuentos de"
+            for discounts in discount {
+                let name : String = discounts.name
+                if discounts.porc>0{
+                    text = "\(text) \(name) de \(discounts.porc)%"
+                }else if discounts.price>0{
+                    text = "\(text) \(name) de S/.\(discounts.price)"
+                }
+                else{
+                    text = "\(text) \(name) de \(discounts.promotion)"
+                }
+            }
+        }
+        else{
+            text = "Todos los descuentos en un solo sito"
+        }
+        return text
+    }
+    
+    func getScheduleText() -> String{
+        var text : String = ""
+        if schedule.count > 0 {
+            text = schedule[0].name
+        }
+        else{
+            text = "Sin horario registrado"
+        }
+        return text
     }
 }
 
@@ -78,6 +113,7 @@ class ScheduleEntity : NSObject {
 class PromotionEntity : NSObject {
     var id : String!
     var name : String!
+    var card : CardEntity?
     var porc : Float = 0
     var price : Float = 0
     var promotion : String!
@@ -104,10 +140,37 @@ class PromotionEntity : NSObject {
         discount.name = data["name"].stringValue
         discount.porc = data["porc"].floatValue
         discount.price = data["price"].floatValue
+        discount.card = CardEntity.getCardFromJSON(fromJSON: data["card"])
         discount.promotion = data["promotion"].stringValue
         discount.terms_condition = data["terms_condition"].stringValue
         discount.descrip = data["descrip"].stringValue
         discount.photo = data["photo"].stringValue
         return discount
     }
+}
+
+class ServicesEntity : NSObject{
+    var id : Int!
+    var name : String!
+    
+    class func getListFromJSON(fromArray jsonArray : [JSON]?) -> [ServicesEntity]?{
+        var services : [ServicesEntity] = []
+        if let data = jsonArray {
+            for json in data {
+                services.append(self.getDetailFromJSON(fromJSON: json)!)
+            }
+        }
+        return services
+    }
+    
+    class func getDetailFromJSON(fromJSON json : JSON?)->ServicesEntity?{
+        guard let data = json else{
+            return nil
+        }
+        let service = ServicesEntity()
+        service.id = data["id"].intValue
+        service.name = data["name"].stringValue
+        return service
+    }
+    
 }

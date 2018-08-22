@@ -10,9 +10,8 @@ import UIKit
 
 class NearPlaceCell : UITableViewCell {
     @IBOutlet weak var imagePlace: UIImageView!
-    
     @IBOutlet weak var distancePlace: UILabel!
     @IBOutlet weak var namePlace: UILabel!
-    
+    @IBOutlet weak var subcategoryName: UILabel!
     @IBOutlet weak var typePlace: UIView!
 }

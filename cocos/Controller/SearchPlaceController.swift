@@ -30,4 +30,12 @@ class SearchPlaceController : NSObject {
                 }, failure: failure)
         }
     }
+    
+    func searchPlace(text : String , success: @escaping (_ places : [PlacesEntity])->Void, failure : @escaping (_ error:NSError)->Void){
+        let user : UserEntity = UserEntity.retriveArchiveUser()!
+        PlacesService.sharedService.getSearchPlaces(token: user.token,search:text, success: { (response) in
+            self.list = ResponseEntityPlaces.getResponseFromJSON(fromJSON: response)
+            success(self.list.results)
+        }, failure: failure)
+    }
 }

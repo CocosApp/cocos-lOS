@@ -22,7 +22,7 @@ class DiscountDescriptionViewController: UIViewController {
         super.viewDidLoad()
         let price : Float = promotion.price
         self.priceLabel.text = "S/.\(price)"
-        self.discountTitleLabel.text = promotion.name
+        self.discountTitleLabel.text = promotion.name.uppercased()
         self.discountDescriptionLabel.text = promotion.descrip
         if promotion.photo != "" {
             self.backgroundImageView.af_setImage(withURL: URL(string:promotion.photo)!)

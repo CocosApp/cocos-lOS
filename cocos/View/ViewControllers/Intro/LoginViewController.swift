@@ -52,6 +52,7 @@ class LoginViewController : BaseUIViewController , GIDSignInDelegate, GIDSignInU
                     self.hideActivityIndicator()
                     self.presentMainViewController()
                 }, failure: { error in
+                    self.hideActivityIndicator()
                     self.requestDidFinishWithError(error)
                 })
             }
@@ -68,11 +69,13 @@ class LoginViewController : BaseUIViewController , GIDSignInDelegate, GIDSignInU
         let hasPermissions = FBSDKAccessToken.current() != nil
         if hasPermissions {
             let token : String = FBSDKAccessToken.current().tokenString!
+            self.showActivityIndicator()
             controller.loginFacebook(token, success: {user in
                 self.loginManager.logOut()
                 self.hideActivityIndicator()
                 self.presentMainViewController()
                 }, failure: { error in
+                    self.hideActivityIndicator()
                     self.loginManager.logOut()
                     self.requestDidFinishWithError(error)
             })
@@ -88,11 +91,13 @@ class LoginViewController : BaseUIViewController , GIDSignInDelegate, GIDSignInU
                 }
                 else {
                     let token : String = FBSDKAccessToken.current().tokenString!
+                    self.showActivityIndicator()
                     controller.loginFacebook(token, success: {user in
                         self.loginManager.logOut()
                         self.hideActivityIndicator()
                         self.presentMainViewController()
                     }, failure: { error in
+                        self.hideActivityIndicator()
                         self.loginManager.logOut()
                         self.requestDidFinishWithError(error)
                     })
@@ -121,10 +126,12 @@ class LoginViewController : BaseUIViewController , GIDSignInDelegate, GIDSignInU
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if error == nil {
             let controller = LoginController.controller
-            controller.loginGmail(user.authentication.accessToken, success: { (user) in
+            self.showActivityIndicator()
+            controller.loginGmail(user.authentication.idToken, success: { (user) in
                 self.hideActivityIndicator()
                 self.presentMainViewController()
             }) { (error) in
+                self.hideActivityIndicator()
                 self.requestDidFinishWithError(error)
             }
         }

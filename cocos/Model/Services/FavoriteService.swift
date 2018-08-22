@@ -22,18 +22,19 @@ class FavoriteService : BaseService {
     }
     
     func getFavoritePlaces(token:String,endpoint:String,success: @escaping SuccessResponse,failure: @escaping FailureResponse){
-        
+        let header = authorizationHeader(withToken: token)
+        self.GETPagination(withEndpoint: endpoint.replacingOccurrences(of: "http", with: "https"), params: nil, headers: header, success: success, failure: failure)
     }
     
     func addFavoritePlace(token:String,idPlace:String,success: @escaping SuccessResponse,failure: @escaping FailureResponse){
         let header = authorizationHeader(withToken: token)
-        let params = ["restaurant":idPlace]
+        let params  = ["restaurant":idPlace]
         self.POST(withEndpoint: FavoriteEndpoint.favoritePlaceList.rawValue, params: params, headers: header, success: success, failure: failure)
     }
     
     func deleteFavoritePlace(token:String,idPlace:String,success: @escaping SuccessResponse,failure: @escaping FailureResponse){
         let header = authorizationHeader(withToken: token)
-        let params = ["restaurant_id":idPlace]
+        let params : [String:String] = ["restaurant_id":idPlace]
         self.POST(withEndpoint: FavoriteEndpoint.deleteFavoritePlace.rawValue, params: params, headers: header, success: success, failure: failure)
     }
 }

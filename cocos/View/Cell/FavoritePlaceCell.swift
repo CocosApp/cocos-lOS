@@ -13,4 +13,9 @@ class FavoritePlaceCell : UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var placeBackgroundView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
+    var likeOff : (()->Void)!
+    
+    @IBAction func likeButtonDidSelect(){
+        self.likeOff()
+    }
 }

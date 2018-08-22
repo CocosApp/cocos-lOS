@@ -14,7 +14,7 @@ enum AuthorizationEndpoints : String {
     case userRetrieve = "user/retrieve/"
     case recoveryPassword = "recovery/"
     case loginFacebook = "login/mobile/facebook/"
-    case loginGmail = "login/mobile/gmail/"
+    case loginGmail = "login/mobile/google-oauth2/"
 }
 
 class AuthorizationService : BaseService {

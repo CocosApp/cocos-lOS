@@ -10,4 +10,5 @@ import Foundation
 
 protocol ErrorMessageDelegate : class {
     func withError(error : String)
+    func withMessage(message : String)
 }

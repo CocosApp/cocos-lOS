@@ -36,6 +36,29 @@ class DescriptionPlaceCell : UITableViewCell{
         phoneLabel.text = placeDetail.mobile
         facebookLink = placeDetail.facebook
         whatsAppNumber = placeDetail.whatsapp
+        timeServiceLabel.text = placeDetail.getScheduleText()
+        for service in placeDetail.service{
+            self.setupServices(service:service)
+        }
+    }
+    
+    func setupServices(service:ServicesEntity){
+        switch service.name {
+        case "Aire acondicionado":
+           airServiceIcon.image = #imageLiteral(resourceName: "air-icon-on")
+        case "Bar":
+           drinkServiceIcon.image = #imageLiteral(resourceName: "drink-icon-on")
+        case "Estacionamiento":
+           parkingServiceIcon.image = #imageLiteral(resourceName: "parking-icon-on")
+        case "Servicios para discapacitados":
+           handicapServiceIcon.image = #imageLiteral(resourceName: "handicap-icon-on")
+        case "Valet Parking":
+           valetParkingServiceIcon.image = #imageLiteral(resourceName: "valet-parking-icon-on")
+        case "Wi-Fi":
+           wifiServiceIcon.image = #imageLiteral(resourceName: "wifi-icon-on")
+        default:
+            break
+        }
     }
     
     @IBAction func getFacebookLink(_ sender:UIButton){
@@ -89,7 +112,7 @@ class DescriptionPlaceCell : UITableViewCell{
             }
         }
         else {
-            self.placeDetailDelegate.withError(error: "No hay carta disponible")
+            self.placeDetailDelegate.withMessage(message: "No hay carta disponible")
         }
     }
     

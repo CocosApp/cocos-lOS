@@ -81,7 +81,7 @@ class PlaceDetailViewController : UIViewController {
         else{
             let controller = PlaceDetailController.controller
             controller.addFavoritePlace(placeId: placeId, success: { (response) in
-                
+                self.likeBarButtonItem.image = #imageLiteral(resourceName: "like_on")
             }) { (error) in
                 self.showErrorMessage(withTitle: "Usted ya cuenta con este restaurante como favorito")
             }
@@ -90,21 +90,30 @@ class PlaceDetailViewController : UIViewController {
     
     
     @IBAction func shareButtonDidSelect(_ sender: UIBarButtonItem) {
-        if let image = self.placeDetail.photo1 {
-            self.downloadShareImage(imageUrl: image)
+//        if let image = self.placeDetail.photo1 {
+//            self.downloadShareImage(imageUrl: image)
+//        }
+        if let image = self.pagerImage.itemViews[0]?.toImage() {
+            self.shareWithSocialMedia(image: image)
         }
     }
     
+    func shareWithSocialMedia(image : UIImage){
+        let text = self.placeDetail.getShareText()
+        let shareAll = [text,image] as [Any]
+        let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
     func downloadShareImage(imageUrl : String?){
-        //let downloader = ImageDownloader()
         if let imageurl = imageUrl{
-            //let urlRequest = URLRequest(url: URL(string: imageurl)!)
             DataRequest.addAcceptableImageContentTypes(["image/jpg"])
             self.showActivityIndicator()
             Alamofire.request(imageurl, method: .get).responseImage { response in
                 self.hideActivityIndicator()
                 if let data = response.result.value {
-                    let text = "Todos los descuentos en un solo sito"
+                    let text = self.placeDetail.getShareText()
                     let myWebsite : NSURL!
                     if self.placeDetail.facebook != ""{
                         myWebsite = NSURL(string:self.placeDetail.facebook)!
@@ -112,12 +121,12 @@ class PlaceDetailViewController : UIViewController {
                     else {
                         myWebsite = NSURL(string:"https://appcocos.com")!
                     }
-                    let shareAll = [text,data,myWebsite] as [Any]
+                    let shareAll = [text,data] as [Any]
                     let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
                     activityViewController.popoverPresentationController?.sourceView = self.view
                     self.present(activityViewController, animated: true, completion: nil)
                 } else {
-                    let text = "Todos los descuentos en un solo sito"
+                    let text = self.placeDetail.getShareText()
                     let myWebsite : NSURL!
                     if self.placeDetail.facebook != ""{
                         myWebsite = NSURL(string:self.placeDetail.facebook)!
@@ -125,7 +134,7 @@ class PlaceDetailViewController : UIViewController {
                     else {
                         myWebsite = NSURL(string:"https://appcocos.com")!
                     }
-                    let shareAll = [text, myWebsite] as [Any]
+                    let shareAll = [text] as [Any]
                     let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
                     activityViewController.popoverPresentationController?.sourceView = self.view
                     self.present(activityViewController, animated: true, completion: nil)
@@ -195,7 +204,7 @@ extension PlaceDetailViewController : UITableViewDelegate,UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if state == .promotion {
             self.promotionSelected = self.placeDetail.discount[indexPath.row]
-            if self.promotionSelected.price != 0 {
+            if self.promotionSelected.price != 0 || self.promotionSelected.promotion != "" {
                 self.performSegue(withIdentifier: "showDiscountDescriptionIdentifier", sender: self)
             }
             else{
@@ -262,5 +271,8 @@ extension PlaceDetailViewController : ErrorMessageDelegate {
         self.showErrorMessage(withTitle: error)
     }
     
+    func withMessage(message : String){
+        self.showSuccessMessage(withTitle: message)
+    }
     
 }
