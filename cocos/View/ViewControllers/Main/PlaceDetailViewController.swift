@@ -83,7 +83,7 @@ class PlaceDetailViewController : UIViewController {
             controller.addFavoritePlace(placeId: placeId, success: { (response) in
                 self.likeBarButtonItem.image = #imageLiteral(resourceName: "like_on")
             }) { (error) in
-                self.showErrorMessage(withTitle: "Usted ya cuenta con este restaurante como favorito")
+                self.showSuccessMessage(withTitle: "Usted ya cuenta con este restaurante como favorito")
             }
         }
     }
