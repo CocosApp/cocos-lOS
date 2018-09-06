@@ -21,7 +21,14 @@ class DiscountDescriptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let price : Float = promotion.price
-        self.priceLabel.text = "S/.\(price)"
+        if price >  0 { //Por precip
+            self.priceLabel.text = "S/.\(price)"
+        }else if promotion.promotion != ""{
+            self.priceLabel.text = "\(promotion.promotion!)"
+        }else{ //por promoción
+            self.priceLabel.text = "-"
+        }
+        
         self.discountTitleLabel.text = promotion.name.uppercased()
         self.discountDescriptionLabel.text = promotion.descrip
         if promotion.photo != "" {

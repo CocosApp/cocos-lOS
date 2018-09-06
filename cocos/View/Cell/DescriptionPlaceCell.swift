@@ -18,17 +18,25 @@ class DescriptionPlaceCell : UITableViewCell{
     @IBOutlet weak var locationLabel : UILabel!
     @IBOutlet weak var timeServiceLabel : UILabel!
     @IBOutlet weak var phoneLabel : UILabel!
+    @IBOutlet weak var facebookView : UIView!
+    @IBOutlet weak var whatsAppView : UIView!
+    
     var facebookLink : String!
     var whatsAppNumber : String!
     var latitude: Double = 0.0
     var longitude: Double = 0.0
     var placeDetailDelegate : ErrorMessageDelegate!
+    
+    var tapGestureFacebook = UITapGestureRecognizer()
+    var tapGestureWhatsApp = UITapGestureRecognizer()
+    
     var placeDetail = PlaceDetailEntity(){
         didSet{
             self.setup()
         }
     }
     func setup(){
+        setConfigurationsTapGestures()
         locationLabel.text = placeDetail.address
         if placeDetail.schedule.count>0{
             timeServiceLabel.text = placeDetail.schedule[0].name
@@ -42,8 +50,16 @@ class DescriptionPlaceCell : UITableViewCell{
         }
     }
     
+    func setConfigurationsTapGestures(){
+        tapGestureFacebook = UITapGestureRecognizer(target: self, action: #selector(self.getFacebookLink(_:)))
+        tapGestureWhatsApp = UITapGestureRecognizer(target: self, action: #selector(self.getWhatsappLink(_:)))
+        
+        self.facebookView.addGestureRecognizer(tapGestureFacebook)
+        self.whatsAppView.addGestureRecognizer(tapGestureWhatsApp)
+    }
+    
     func setupServices(service:ServicesEntity){
-        switch service.name {
+        /*switch service.name {
         case "Aire acondicionado":
            airServiceIcon.image = #imageLiteral(resourceName: "air-icon-on")
         case "Bar":
@@ -56,6 +72,23 @@ class DescriptionPlaceCell : UITableViewCell{
            valetParkingServiceIcon.image = #imageLiteral(resourceName: "valet-parking-icon-on")
         case "Wi-Fi":
            wifiServiceIcon.image = #imageLiteral(resourceName: "wifi-icon-on")
+        default:
+            break
+        }*/
+        
+        switch service.id {
+        case 2:
+            airServiceIcon.image = #imageLiteral(resourceName: "ic_air_conditioner_red")
+        case 4:
+            drinkServiceIcon.image = #imageLiteral(resourceName: "ic_bar_red")
+        case 6:
+            parkingServiceIcon.image = #imageLiteral(resourceName: "ic_parking_lot_red")
+        case 3:
+            handicapServiceIcon.image = #imageLiteral(resourceName: "ic_reserved_seating_red")
+        case 5:
+            valetParkingServiceIcon.image = #imageLiteral(resourceName: "ic_valet_parking_red")
+        case 1:
+            wifiServiceIcon.image = #imageLiteral(resourceName: "ic_wifi_red")
         default:
             break
         }

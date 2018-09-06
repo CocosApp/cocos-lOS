@@ -36,7 +36,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>14</string>
+	<string>16</string>
 	<key>FacebookAppID</key>
 	<string>2002215986463169</string>
 	<key>FacebookDisplayName</key>
@@ -54,12 +54,18 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>$(PRODUCT_NAME) requiere acceso a la biblioteca de fotos para poder compartir contenido del app.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>$(PRODUCT_NAME) quiere acceder a tu localización para mostrate los lugares mas cercanos a tu posición.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>$(PRODUCT_NAME) quiere acceder a tu localización para mostrate los lugares mas cercanos a tu posición.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>$(PRODUCT_NAME) quiere acceder a tu localización para mostrarte los lugares mas cercanos a tu posición.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>$(PRODUCT_NAME) requiere acceso a la biblioteca de fotos para poder compartir contenido del app.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$(PRODUCT_NAME) requiere acceso a la biblioteca de fotos para poder compartir contenido del app.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

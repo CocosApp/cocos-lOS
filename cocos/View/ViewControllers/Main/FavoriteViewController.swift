@@ -76,6 +76,7 @@ class FavoriteViewController : BaseUIViewController {
             if let viewController = segue.destination as? PlaceDetailViewController {
                 let id : Int = (self.place.place?.id)!
                 viewController.placeId = String(id)
+                viewController.origin = "Favorites"
             }
         }
     }

@@ -6,7 +6,7 @@ use_frameworks!
 pod 'Alamofire'
 pod 'AlamofireImage'
 pod 'IQKeyboardManagerSwift'
-pod 'PhoneNumberKit', '~> 1.3'
+pod 'PhoneNumberKit', '~> 2.1'
 pod 'SVProgressHUD'
 pod 'GoogleSignIn'
 pod 'SwiftMessages'
