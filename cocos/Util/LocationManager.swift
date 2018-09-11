@@ -56,7 +56,7 @@ class LocationManager : NSObject,CLLocationManagerDelegate {
             
             var url: URL?
             
-            if !CLLocationManager.locationServicesEnabled()
+            /*if !CLLocationManager.locationServicesEnabled()
             {
                 // Works in ios 10
                 url = URL(string: "App-Prefs:root=Privacy&path=LOCATION")
@@ -64,7 +64,8 @@ class LocationManager : NSObject,CLLocationManagerDelegate {
             else
             {
                 url = URL(string: UIApplicationOpenSettingsURLString)
-            }
+            }*/
+            url = URL(string: UIApplicationOpenSettingsURLString)
             
             guard url != nil else {
                 

@@ -40,7 +40,7 @@ class PromotionPlaceCell : UITableViewCell {
             else{
                 self.titleDiscount.text = promotion.name
             }
-            self.titleDiscount.text = promotion.name
+            //self.titleDiscount.text = promotion.name
             let proc : String = String(promotion.price)
             descriptionAmount = "S/.\(proc)"
         }
@@ -52,7 +52,7 @@ class PromotionPlaceCell : UITableViewCell {
             }else{
                 self.titleDiscount.text = promotion.name
             }
-            self.titleDiscount.text = promotion.name
+            //self.titleDiscount.text = promotion.name
             descriptionAmount = promotion.promotion
         }
         self.amountDiscount.text = descriptionAmount
