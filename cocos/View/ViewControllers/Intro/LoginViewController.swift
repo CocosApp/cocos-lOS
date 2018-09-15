@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Firebase
 import GoogleSignIn
 
 class LoginViewController : BaseUIViewController , GIDSignInDelegate, GIDSignInUIDelegate{
@@ -49,6 +50,14 @@ class LoginViewController : BaseUIViewController , GIDSignInDelegate, GIDSignInU
                 let controller = LoginController.controller
                 self.showActivityIndicator()
                 controller.login(email: email, password: password, success: {user in
+                    //Analytics
+                    let date = Date()
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "dd-MM-yyyy HH:mm"
+                    let actualDate = formatter.string(from: date)
+                    let params = ["id_user":user.id,"name_user":user.fullName,"date":actualDate,"label":"login","so":"ios"] as [String:Any]
+                    Analytics.logEvent("login", parameters: params)
+                    
                     self.hideActivityIndicator()
                     self.presentMainViewController()
                 }, failure: { error in
@@ -71,6 +80,14 @@ class LoginViewController : BaseUIViewController , GIDSignInDelegate, GIDSignInU
             let token : String = FBSDKAccessToken.current().tokenString!
             self.showActivityIndicator()
             controller.loginFacebook(token, success: {user in
+                //Analytics
+                let date = Date()
+                let formatter = DateFormatter()
+                formatter.dateFormat = "dd-MM-yyyy HH:mm"
+                let actualDate = formatter.string(from: date)
+                let params = ["id_user":user.id,"name_user":user.fullName,"date":actualDate,"label":"login_fb","so":"ios"] as [String:Any]
+                Analytics.logEvent("login_fb", parameters: params)
+                
                 self.loginManager.logOut()
                 self.hideActivityIndicator()
                 self.presentMainViewController()
@@ -93,6 +110,14 @@ class LoginViewController : BaseUIViewController , GIDSignInDelegate, GIDSignInU
                     let token : String = FBSDKAccessToken.current().tokenString!
                     self.showActivityIndicator()
                     controller.loginFacebook(token, success: {user in
+                        //Analytics
+                        let date = Date()
+                        let formatter = DateFormatter()
+                        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+                        let actualDate = formatter.string(from: date)
+                        let params = ["id_user":user.id,"name_user":user.fullName,"date":actualDate,"label":"login_fb","so":"ios"] as [String:Any]
+                        Analytics.logEvent("login_fb", parameters: params)
+                        
                         self.loginManager.logOut()
                         self.hideActivityIndicator()
                         self.presentMainViewController()
@@ -115,6 +140,14 @@ class LoginViewController : BaseUIViewController , GIDSignInDelegate, GIDSignInU
         let controller = LoginController.controller
         self.showActivityIndicator()
         controller.login(email: "invitado@gmail.com", password: "12345", success: {user in
+            //Analytics
+            let date = Date()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd-MM-yyyy HH:mm"
+            let actualDate = formatter.string(from: date)
+            let params = ["date":actualDate,"label":"login_guest","so":"ios"] as [String:Any]
+            Analytics.logEvent("login_guest", parameters: params)
+            
             self.hideActivityIndicator()
             self.presentMainViewController()
         }, failure: { error in
@@ -128,6 +161,14 @@ class LoginViewController : BaseUIViewController , GIDSignInDelegate, GIDSignInU
             let controller = LoginController.controller
             self.showActivityIndicator()
             controller.loginGmail(user.authentication.idToken, success: { (user) in
+                //Analytics
+                let date = Date()
+                let formatter = DateFormatter()
+                formatter.dateFormat = "dd-MM-yyyy HH:mm"
+                let actualDate = formatter.string(from: date)
+                let params = ["id_user":user.id,"name_user":user.fullName,"date":actualDate,"label":"login_gmail","so":"ios"] as [String:Any]
+                Analytics.logEvent("login_gmail", parameters: params)
+                
                 self.hideActivityIndicator()
                 self.presentMainViewController()
             }) { (error) in

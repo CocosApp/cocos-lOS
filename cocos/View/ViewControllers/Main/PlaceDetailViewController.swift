@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import Alamofire
 import AlamofireImage
 
@@ -139,6 +140,14 @@ class PlaceDetailViewController : UIViewController {
         
         activityController.completionWithItemsHandler = { (nil, completed, _, error) in
             if completed {
+                //Analytics
+                let date = Date()
+                let formatter = DateFormatter()
+                formatter.dateFormat = "dd-MM-yyyy HH:mm"
+                let actualDate = formatter.string(from: date)
+                let params = ["id_restaurant":self.placeDetail.id,"name_restaurant":self.placeDetail.name,"id_user":self.user.id,"name_user":self.user.fullName,"date":actualDate,"label":"share_restaurant","so":"ios"] as [String:Any]
+                Analytics.logEvent("share_restaurant", parameters: params)
+                
                 print("Completado")
             } else {
                 print("Cancelado")
@@ -222,6 +231,12 @@ class PlaceDetailViewController : UIViewController {
             if let vc = segue.destination as? DiscountDescriptionViewController {
                 vc.promotion = self.promotionSelected
                 vc.templateImage = self.placeDetail.photo1
+            }
+        }
+        if segue.identifier == kshowCarPopUpIdentifier {
+            if let vc = segue.destination as? CarPopUp{
+                vc.placeSelected = self.placeDetail
+                vc.user = self.user
             }
         }
     }
@@ -324,6 +339,14 @@ extension PlaceDetailViewController : UITableViewDelegate,UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if state == .promotion {
             self.promotionSelected = self.placeDetail.discount[indexPath.row]
+            //Analytics
+            let date = Date()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd-MM-yyyy HH:mm"
+            let actualDate = formatter.string(from: date)
+            let params = ["id_discount":promotionSelected.id,"name_discount":promotionSelected.name,"id_user":user.id,"name_user":user.fullName,"date":actualDate,"label":"detail_discount","so":"ios"] as [String:Any]
+            Analytics.logEvent("detail_discount", parameters: params)
+            
             if self.promotionSelected.price != 0 || self.promotionSelected.promotion != "" {
                 self.performSegue(withIdentifier: "showDiscountDescriptionIdentifier", sender: self)
             }

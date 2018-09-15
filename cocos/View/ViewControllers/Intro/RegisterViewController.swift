@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController : BaseUIViewController {
     
@@ -38,6 +39,14 @@ class RegisterViewController : BaseUIViewController {
                             self.showActivityIndicator()
                             let controller = RegisterController.controller
                             controller.register(email: email, password: password, firstName: name, lastName: lastName, success: { (user) in
+                                //Analytics
+                                let date = Date()
+                                let formatter = DateFormatter()
+                                formatter.dateFormat = "dd-MM-yyyy HH:mm"
+                                let actualDate = formatter.string(from: date)
+                                let params = ["date":actualDate,"label":"register","so":"ios"] as [String:Any]
+                                Analytics.logEvent("register", parameters: params)
+                                
                                 self.hideActivityIndicator()
                                 self.presentMainViewController()
                             }, failure: { error in

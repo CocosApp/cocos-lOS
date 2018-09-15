@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         GIDSignIn.sharedInstance().clientID = "127745630015-4ishvs1opshogmlp07dmcovb2oferjae.apps.googleusercontent.com"
-        //FirebaseApp.configure()
+        FirebaseApp.configure()
         setupNavigation()
         return true
     }

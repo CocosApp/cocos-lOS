@@ -8,6 +8,7 @@
 
 import UIKit
 import UIScrollView_InfiniteScroll
+import Firebase
 
 class PlacesByCardViewController: UIViewController {
     @IBOutlet weak var placesByCardTableView: UITableView!
@@ -20,6 +21,7 @@ class PlacesByCardViewController: UIViewController {
             placesByCardTableView.reloadData()
         }
     }
+    let user : UserEntity = UserEntity.retriveArchiveUser()!
     var cardId: String!
     var cardName: String!
     
@@ -82,6 +84,14 @@ extension PlacesByCardViewController : UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.place = places[indexPath.row];
+        //Analytics
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+        let actualDate = formatter.string(from: date)
+        let params = ["id_restaurant":place.id,"name_restaurant":place.name,"id_user":user.id,"name_user":user.fullName,"date":actualDate,"label":"detail_restaurant"] as [String:Any]
+        Analytics.logEvent("detail_restaurant", parameters: params)
+        
         performSegue(withIdentifier: kPlaceDetailIdentifier, sender: self)
     }
     

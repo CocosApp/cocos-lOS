@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class NewPlacesViewController: BaseUIViewController {
     @IBOutlet weak var categoryButton: UIButton!
@@ -43,14 +44,38 @@ class NewPlacesViewController: BaseUIViewController {
     
     @IBAction func categoryButtonDidSelect(_ sender: Any) {
         selectButton(PlacesButtonSelected.category)
+        //Analytics
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+        let actualDate = formatter.string(from: date)
+        let params = ["date":actualDate,"label":"category_button","so":"ios"] as [String:Any]
+        Analytics.logEvent("category_button", parameters: params)
+        
     }
     
     @IBAction func nearMeButtonDidSelect(_ sender: Any) {
         selectButton(PlacesButtonSelected.nearMe)
+        //Analytics
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+        let actualDate = formatter.string(from: date)
+        let params = ["date":actualDate,"label":"near_me_button","so":"ios"] as [String:Any]
+        Analytics.logEvent("near_me_button", parameters: params)
+        
     }
     
     @IBAction func benefitButtonDidSelect(_ sender: Any) {
         selectButton(PlacesButtonSelected.discount)
+        //Analytics
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+        let actualDate = formatter.string(from: date)
+        let params = ["date":actualDate,"label":"benefit_button","so":"ios"] as [String:Any]
+        Analytics.logEvent("benefit_button", parameters: params)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

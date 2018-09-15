@@ -7,10 +7,22 @@
 //
 
 import UIKit
+import Firebase
 
 class CarPopUp : UIViewController {
     
+    var placeSelected: PlaceDetailEntity!
+    var user: UserEntity!
+    
     @IBAction func uberButtonDidSelect(_ sender: UIButton) {
+        //Analytics
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+        let actualDate = formatter.string(from: date)
+        let params = ["id_restaurant":placeSelected.id,"name_restaurant":placeSelected.name,"id_user":user.id,"name_user":user.fullName,"date":actualDate,"label":"take_uber","so":"ios"] as [String:Any]
+        Analytics.logEvent("take_uber", parameters: params)
+        
         if let url = URL(string: "uber://?action=setPickup")
         {
             if UIApplication.shared.canOpenURL(url)
@@ -28,6 +40,14 @@ class CarPopUp : UIViewController {
     }
     
     @IBAction func cabifyButtonDidSelect(_ sender: UIButton) {
+        //Analytics
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+        let actualDate = formatter.string(from: date)
+        let params = ["id_restaurant":placeSelected.id,"name_restaurant":placeSelected.name,"id_user":user.id,"name_user":user.fullName,"date":actualDate,"label":"take_cabify"] as [String:Any]
+        Analytics.logEvent("take_cabify", parameters: params)
+        
         if let url = URL(string: "cabify://cabify")
         {
             if UIApplication.shared.canOpenURL(url)

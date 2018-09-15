@@ -8,6 +8,7 @@
 
 import UIKit
 import UIScrollView_InfiniteScroll
+import Firebase
 
 class BenefitsViewController: BaseUIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -89,6 +90,14 @@ extension BenefitsViewController : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.discountSelect = self.discountList[indexPath.row]
+        //Analytics
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+        let actualDate = formatter.string(from: date)
+        let params = ["id_discount":discountSelect.id,"name_discount":discountSelect.name,"id_user":user.id,"name_user":user.fullName,"date":actualDate,"label":"detail_discount","so":"ios"] as [String:Any]
+        Analytics.logEvent("detail_discount", parameters: params)
+        
         performSegue(withIdentifier: kcardPlacesIdentifier, sender: self)
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import AlamofireImage
 import UIScrollView_InfiniteScroll
 
@@ -88,6 +89,14 @@ extension CategoryViewController : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.subcategorySelected = self.placesList[indexPath.row]
+        //Analytics
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+        let actualDate = formatter.string(from: date)
+        let params = ["id_category":subcategorySelected.id,"name_category":subcategorySelected.name,"id_user":user.id,"name_user":user.fullName,"date":actualDate,"label":"detail_category","so":"ios"] as [String:Any]
+        Analytics.logEvent("detail_category", parameters: params)
+        
         performSegue(withIdentifier: kshowPlaceListSegue, sender: self)
     }
 }
