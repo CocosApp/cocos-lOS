@@ -69,7 +69,6 @@
 		49C6B9C1201FE83500F390D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C6B9BF201FE83500F390D4 /* Main.storyboard */; };
 		49C6B9C3201FE83600F390D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C6B9C2201FE83600F390D4 /* Assets.xcassets */; };
 		49C6B9C6201FE83600F390D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C6B9C4201FE83600F390D4 /* LaunchScreen.storyboard */; };
-		49C6B9D1201FE83600F390D4 /* cocosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C6B9D0201FE83600F390D4 /* cocosTests.swift */; };
 		49C6B9DC201FE83600F390D4 /* cocosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C6B9DB201FE83600F390D4 /* cocosUITests.swift */; };
 		49C74E652031040A0005EE70 /* UITextfieldWithBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C74E642031040A0005EE70 /* UITextfieldWithBorder.swift */; };
 		49C7902520E3FF9300B57E3E /* CarPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C7902420E3FF9300B57E3E /* CarPopUp.storyboard */; };
@@ -93,6 +92,8 @@
 		49FAEEF8203E3994000E444A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FAEEF7203E3994000E444A /* LoginController.swift */; };
 		49FAEEFA203E4005000E444A /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FAEEF9203E4005000E444A /* UserEntity.swift */; };
 		49FAEEFC203E70B3000E444A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FAEEFB203E70B3000E444A /* RegisterViewController.swift */; };
+		7F04A19321568DB00033BA7E /* cocosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C6B9D0201FE83600F390D4 /* cocosTests.swift */; };
+		CBCBB09E8719BA0811C7F278 /* Pods_cocosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E975E300B2F02B2FB3241B3E /* Pods_cocosTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,7 +206,10 @@
 		49FAEEF9203E4005000E444A /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		49FAEEFB203E70B3000E444A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4F6B3251013C6875612E047E /* Pods_cocos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cocos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A9637C3BE8D1655B21153A /* Pods-cocosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cocosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cocosTests/Pods-cocosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CEF80CB9ED6FE5E857ACD669 /* Pods-cocos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cocos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cocos/Pods-cocos.debug.xcconfig"; sourceTree = "<group>"; };
+		D77557EE6FD2B9BCEB2908E1 /* Pods-cocosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cocosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-cocosTests/Pods-cocosTests.release.xcconfig"; sourceTree = "<group>"; };
+		E975E300B2F02B2FB3241B3E /* Pods_cocosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cocosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE3CB0B5F780FBBF1CDC740 /* Pods-cocos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cocos.release.xcconfig"; path = "Pods/Target Support Files/Pods-cocos/Pods-cocos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,6 +229,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBCBB09E8719BA0811C7F278 /* Pods_cocosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +544,8 @@
 			children = (
 				CEF80CB9ED6FE5E857ACD669 /* Pods-cocos.debug.xcconfig */,
 				EDE3CB0B5F780FBBF1CDC740 /* Pods-cocos.release.xcconfig */,
+				92A9637C3BE8D1655B21153A /* Pods-cocosTests.debug.xcconfig */,
+				D77557EE6FD2B9BCEB2908E1 /* Pods-cocosTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -550,6 +557,7 @@
 				497DAE7D20AD2A6A00101135 /* FBSDKLoginKit.framework */,
 				49FAEEF2203DEB52000E444A /* Alamofire.framework */,
 				4F6B3251013C6875612E047E /* Pods_cocos.framework */,
+				E975E300B2F02B2FB3241B3E /* Pods_cocosTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -581,9 +589,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49C6B9E3201FE83600F390D4 /* Build configuration list for PBXNativeTarget "cocosTests" */;
 			buildPhases = (
+				FED1070560FBFE1BE5837500 /* [CP] Check Pods Manifest.lock */,
 				49C6B9C8201FE83600F390D4 /* Sources */,
 				49C6B9C9201FE83600F390D4 /* Frameworks */,
 				49C6B9CA201FE83600F390D4 /* Resources */,
+				92BB05AF038A34BD8D1091EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -731,7 +741,7 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac-f0850809/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -785,6 +795,44 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		92BB05AF038A34BD8D1091EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-cocosTests/Pods-cocosTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac-Defines-NSData+zlib/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cocosTests/Pods-cocosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FED1070560FBFE1BE5837500 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cocosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -821,6 +869,7 @@
 				498F6EE32051E28700382241 /* SubcategoryEntity.swift in Sources */,
 				49287CB42119F13F00F6D7B6 /* ContainerViewController.swift in Sources */,
 				490EA7E520DC4CBD001EDD48 /* PlacesByCardViewController.swift in Sources */,
+				7F04A19321568DB00033BA7E /* cocosTests.swift in Sources */,
 				4998870B204DCB2000C59A64 /* ForgotPasswordViewController.swift in Sources */,
 				4931490E212649C600C087B6 /* UIColor+COCOS.swift in Sources */,
 				498F6EE72051EEA800382241 /* CardEntity.swift in Sources */,
@@ -868,7 +917,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49C6B9D1201FE83600F390D4 /* cocosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1062,6 +1110,7 @@
 		};
 		49C6B9E4201FE83600F390D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92A9637C3BE8D1655B21153A /* Pods-cocosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1079,6 +1128,7 @@
 		};
 		49C6B9E5201FE83600F390D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D77557EE6FD2B9BCEB2908E1 /* Pods-cocosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

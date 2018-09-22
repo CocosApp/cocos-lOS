@@ -97,6 +97,10 @@ extension NearMeViewController : UITableViewDelegate,UITableViewDataSource{
         return placesNearMe.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 180
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NearPlaceCell") as! NearPlaceCell
         cell.namePlace.text = placesNearMe[indexPath.row].name

@@ -27,6 +27,8 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.31.1):
     - FBSDKCoreKit (~> 4.31.1)
+  - Firebase (4.12.0):
+    - Firebase/Core (= 4.12.0)
   - Firebase/Core (4.12.0):
     - FirebaseAnalytics (= 4.1.0)
     - FirebaseCore (= 4.0.19)
@@ -84,6 +86,7 @@ DEPENDENCIES:
   - FacebookCore
   - FacebookLogin
   - FacebookShare
+  - Firebase
   - Firebase/Core
   - GoogleSignIn
   - IQKeyboardManagerSwift
@@ -146,6 +149,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   UIScrollView-InfiniteScroll: 3ef456bcbe759c19f510a383cff96e6647c98c98
 
-PODFILE CHECKSUM: eab8b6790bd47e32c9ffad795d2f760198a9a8fb
+PODFILE CHECKSUM: 2764282d86316aadaea33d98d9f4199141a513da
 
 COCOAPODS: 1.5.3

@@ -78,6 +78,10 @@ extension BenefitsViewController : UITableViewDelegate,UITableViewDataSource {
         return discountList.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DiscountPlaceCell") as! DiscountPlaceCell
         cell.nameDiscount.text = discountList[indexPath.row].name

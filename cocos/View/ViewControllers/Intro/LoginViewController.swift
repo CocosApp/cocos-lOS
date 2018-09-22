@@ -10,11 +10,15 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import GoogleSignIn
+import IQKeyboardManagerSwift
 
 class LoginViewController : BaseUIViewController , GIDSignInDelegate, GIDSignInUIDelegate{
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginScrollView: UIScrollView!
+    
+    var editingKeyboard = false
     
     let loginManager : FBSDKLoginManager = FBSDKLoginManager()
     
@@ -22,8 +26,49 @@ class LoginViewController : BaseUIViewController , GIDSignInDelegate, GIDSignInU
     //MARK: - Lyfecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        IQKeyboardManager.sharedManager().toolbarDoneBarButtonItemText = "Aceptar"
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillShow(_:)), name: Notification.Name.UIKeyboardDidShow, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide(_:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
+        
         self.emailTextField.setBottomBorder()
         self.passwordTextField.setBottomBorder()
+    }
+    
+    //Método que se encarga de configurar la posición de la selección del texto al activar el KeyBoard
+    func adjustInsetForKeyboardShow(_ show : Bool, notification : Notification){
+        let userInfo = notification.userInfo ?? [:] //Le doy la info del user
+        let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue //Le damos la forma al keyboard
+        let adjustmentheight = (keyboardFrame.height+20)*(show ? 1 : -1) //Ajustamos la altura según se deba mostrar y ocultar el keyboard
+        loginScrollView.contentInset.bottom += adjustmentheight //Ajustamos el scroll en base a la altura del keyboad
+        loginScrollView.scrollIndicatorInsets.bottom += adjustmentheight //configuramos los límites del scroll basados en la altura del keyboard
+        
+    }
+    
+    //Configuración para llegar a darle los comandos para los selector en la notificación del KeyBoard
+    @objc func keyboardWillShow(_ notification : Notification){
+        //hideKeyboard(self)
+        
+        if !editingKeyboard { //No ha estado editando antes desde otro filtro
+            adjustInsetForKeyboardShow(true, notification: notification)
+            editingKeyboard = true
+        }else{ //Ha estado editando antes desde otro filtro, solo ha saltado entre filtros, es la primera vez que inicia
+            adjustInsetForKeyboardShow(false, notification: notification)
+        }
+        
+        //adjustInsetForKeyboardShow(true, notification: notification)
+    }
+    
+    @objc func keyboardWillHide(_ notification : Notification){
+        editingKeyboard = false
+        adjustInsetForKeyboardShow(false, notification: notification)
+    }
+    
+    //Este método se encarga de detener las notificaciones cuando la vida del objeto ha culminado
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
