@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import CoreLocation
 import UIScrollView_InfiniteScroll
 
@@ -113,6 +114,14 @@ extension NearMeViewController : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.placeSelected = self.placesNearMe[indexPath.row]
+        //Analytics
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+        let actualDate = formatter.string(from: date)
+        let params = ["id_restaurant":placeSelected.id,"name_restaurant":placeSelected.name,"id_user":user.id,"name_user":user.fullName,"date":actualDate,"label":"detail_restaurant","so":"ios"] as [String:Any]
+        Analytics.logEvent("detail_restaurant", parameters: params)
+        
         performSegue(withIdentifier: kplaceDetailIdentifier, sender: self)
     }
 }

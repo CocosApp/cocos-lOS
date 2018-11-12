@@ -61,6 +61,7 @@
 		4998870B204DCB2000C59A64 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4998870A204DCB2000C59A64 /* ForgotPasswordViewController.swift */; };
 		499E63382027E87900B88867 /* ViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E63372027E87900B88867 /* ViewPager.swift */; };
 		499E633C2027F2E800B88867 /* RoundedBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E633B2027F2E800B88867 /* RoundedBorderButton.swift */; };
+		49B0345F214D943300742534 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B0345E214D943300742534 /* AdSupport.framework */; };
 		49C15CD7210D7124008CCE60 /* LoadListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C15CD5210D7124008CCE60 /* LoadListTableViewCell.swift */; };
 		49C15CD8210D7124008CCE60 /* LoadListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C15CD6210D7124008CCE60 /* LoadListTableViewCell.xib */; };
 		49C68895201FE94000F1E1B3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 49C68894201FE94000F1E1B3 /* Podfile */; };
@@ -167,6 +168,7 @@
 		4998870A204DCB2000C59A64 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		499E63372027E87900B88867 /* ViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPager.swift; sourceTree = "<group>"; };
 		499E633B2027F2E800B88867 /* RoundedBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderButton.swift; sourceTree = "<group>"; };
+		49B0345E214D943300742534 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		49C15CD5210D7124008CCE60 /* LoadListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadListTableViewCell.swift; sourceTree = "<group>"; };
 		49C15CD6210D7124008CCE60 /* LoadListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadListTableViewCell.xib; sourceTree = "<group>"; };
 		49C68894201FE94000F1E1B3 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -218,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B0345F214D943300742534 /* AdSupport.framework in Frameworks */,
 				497DAE7C20AD2A6A00101135 /* FBSDKCoreKit.framework in Frameworks */,
 				497DAE7E20AD2A6A00101135 /* FBSDKLoginKit.framework in Frameworks */,
 				49FAEEF1203DEB52000E444A /* Alamofire.framework in Frameworks */,
@@ -553,6 +556,7 @@
 		8767174AB06517297B8ADDC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49B0345E214D943300742534 /* AdSupport.framework */,
 				497DAE7B20AD2A6A00101135 /* FBSDKCoreKit.framework */,
 				497DAE7D20AD2A6A00101135 /* FBSDKLoginKit.framework */,
 				49FAEEF2203DEB52000E444A /* Alamofire.framework */,

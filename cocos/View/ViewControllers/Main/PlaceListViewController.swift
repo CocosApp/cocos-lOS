@@ -8,7 +8,7 @@
 
 import UIKit
 import UIScrollView_InfiniteScroll
-
+import Firebase
 
 class PlaceListViewController : UIViewController {
     @IBOutlet weak var listTableView : UITableView!
@@ -23,6 +23,7 @@ class PlaceListViewController : UIViewController {
     }
     var subcategoryId:Int!
     var subcategoryName:String!
+    let user : UserEntity = UserEntity.retriveArchiveUser()!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +52,6 @@ class PlaceListViewController : UIViewController {
     }
     
     private func loadList(){
-        let user : UserEntity = UserEntity.retriveArchiveUser()!
         let controller = PlaceListController.controller
         let subcategory : String = String(subcategoryId)
         controller.loadList(user.token, subcategoryId: subcategory, success: { (places) in
@@ -89,6 +89,14 @@ extension PlaceListViewController : UITableViewDelegate , UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.place = placesList[indexPath.row];
+        //Analytics
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+        let actualDate = formatter.string(from: date)
+        let params = ["id_restaurant":place.id,"name_restaurant":place.name,"id_user":user.id,"name_user":user.fullName,"date":actualDate,"label":"detail_restaurant","so":"ios"] as [String:Any]
+        Analytics.logEvent("detail_restaurant", parameters: params)
+        
         performSegue(withIdentifier: kPlaceDetailIdentifier, sender: self)
     }
     
