@@ -17,9 +17,9 @@ pod 'FacebookLogin'
 pod 'Firebase/Core'
 pod 'FacebookShare'
 
-    target 'cocosTests' do
-    inherit! :search_paths
-    pod 'Firebase'
-    end
+target 'cocosTests' do
+inherit! :search_paths
+pod 'Firebase'
+end
 
 end

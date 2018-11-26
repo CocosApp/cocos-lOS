@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Firebase
 @testable import cocos
 
 class cocosTests: XCTestCase {

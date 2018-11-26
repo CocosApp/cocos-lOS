@@ -19,42 +19,37 @@ class PromotionPlaceCell : UITableViewCell {
     }
     
     func setup(){
-        var descriptionAmount : String!
-        if promotion.porc != 0 {
-            if promotion.card != nil{
-                let cardName : String = (promotion.card?.name)!
-                self.titleDiscount.text = cardName
-            }
-            else{
-                self.titleDiscount.text = promotion.name
-            }
-            let proc : String = String(promotion.porc)
-            descriptionAmount = "\(proc)%"
-        }
-        else if promotion.price != 0{
-            if promotion.card != nil{
-                let cardName : String = (promotion.card?.name)!
-                let descName : String = promotion.name
-                self.titleDiscount.text = "\(cardName) \(descName)"
-            }
-            else{
-                self.titleDiscount.text = promotion.name
-            }
-            //self.titleDiscount.text = promotion.name
-            let proc : String = String(promotion.price)
-            descriptionAmount = "S/.\(proc)"
-        }
-        else {
-            if promotion.card != nil {
-                let cardName : String = (promotion.card?.name)!
-                let descName : String = promotion.name
-                self.titleDiscount.text = "\(cardName) \(descName)"
+        
+        if (promotion.card != nil && promotion.card!.name != ""){
+            
+            if(promotion.porc != 0){
+                self.titleDiscount.text = promotion.card?.name
+                self.amountDiscount.text = "\(promotion.porc)%"
             }else{
-                self.titleDiscount.text = promotion.name
+                let cardName : String = (promotion.card?.name)!
+                let descName : String = promotion.name
+                if(promotion.price != 0) {
+                    self.titleDiscount.text = "\(cardName) \(descName)"
+                    self.amountDiscount.text = "S/ \(promotion.price)"
+                    
+                }else{
+                    self.titleDiscount.text = "\(cardName) \(descName)"
+                    self.amountDiscount.text = promotion.promotion
+                }
             }
-            //self.titleDiscount.text = promotion.name
-            descriptionAmount = promotion.promotion
+        }else{
+            self.titleDiscount.text = promotion.name
+            
+            if(promotion.porc != 0){
+                self.amountDiscount.text = "\(promotion.porc)%"
+            }else{
+                if(promotion.price != 0){
+                    self.amountDiscount.text = "S/ \(promotion.price)"
+                    
+                }else{
+                    self.amountDiscount.text = promotion.promotion
+                }
+            }
         }
-        self.amountDiscount.text = descriptionAmount
     }
 }
